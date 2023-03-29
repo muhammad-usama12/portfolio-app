@@ -1,0 +1,27 @@
+ul {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  padding-top: 10px;
+  font-size: 20px;
+  li {
+    list-style: none;
+    color: white;
+  }
+}
+
+.name {
+  color: black;
+  position: fixed;
+  top: 0%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  border-radius: 0px;
+  background-color: #c0a062;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 28px;
+}
