@@ -1,15 +1,23 @@
-ul {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  padding-top: 10px;
-  font-size: 20px;
-  li {
-    list-style: none;
-    color: white;
-  }
-}
+.about {
+  padding: 1rem;
 
+  color: white;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  text-decoration: none;
+  display: flex;
+  font-size: 28px;
+}
+.projects {
+  padding: 1rem;
+  color: white;
+  position: fixed;
+  text-decoration: none;
+  top: 0%;
+  left: 0%;
+  font-size: 28px;
+}
 .name {
   color: black;
   position: fixed;
@@ -19,6 +27,7 @@ ul {
   height: 70px;
   border-radius: 0px;
   background-color: #c0a062;
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;

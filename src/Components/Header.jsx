@@ -5,11 +5,15 @@ function Header() {
   return (
     <div>
       <nav>
-        <li className="name">MU</li>
-        <ul>
-          <li className="projects">Projects</li>
-          <li className="about">About</li>
-        </ul>
+        <a href="/" className="projects">
+          Projects
+        </a>
+        <a href="/" className="name">
+          MU
+        </a>
+        <a href="/" className="about">
+          About
+        </a>
       </nav>
     </div>
   );
