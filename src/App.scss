@@ -1,0 +1,21 @@
+.blob-motion {
+  position: absolute;
+  transform: translateY(-20%);
+  top: 40%;
+  z-index: -1;
+}
+.blob-motion2 {
+  position: absolute;
+  transform: translateY(-20%);
+  top: 40%;
+  z-index: -2;
+}
+.blob-motion3 {
+  position: absolute;
+  transform: translateY(-20%);
+  top: 40%;
+  z-index: -1;
+}
+.app {
+  z-index: 9999;
+}
