@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { TypeAnimation } from "react-type-animation";
 import "./Container.scss";
 
 const languages = [
@@ -43,7 +44,18 @@ function Container() {
       </div>
       <div className="wrapper">
         <h2 className="initial">
-          <span>I'm a</span>
+          <span className="fix">I'm a </span>
+          <TypeAnimation
+            className="typewriter"
+            speed={{ type: "keyStrokeDelayInMs", value: 100 }}
+            deletionSpeed={{ type: "keyStrokeDelayInMs", value: 100 }}
+            sequence={[
+              "problem solver",
+              "fast learner",
+              "logical thinker",
+              "full-stack developer",
+            ]}
+          />
         </h2>
       </div>
     </div>
