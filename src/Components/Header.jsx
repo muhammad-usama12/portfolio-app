@@ -14,6 +14,9 @@ function Header() {
         <a href="/" className="about">
           About
         </a>
+        <a href="/" className="contact">
+          Contact
+        </a>
       </nav>
     </div>
   );

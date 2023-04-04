@@ -39,7 +39,7 @@ function Svg() {
     <div className="blobs">
       {" "}
       <svg
-        className="blob-motion2"
+        className="blob-motion"
         viewBox="0 0 900 600"
         width="900"
         height="600"
@@ -87,7 +87,7 @@ function Svg() {
         </g>
       </svg>
       <svg
-        className="blob-motion3"
+        className="blob-motion"
         viewBox="0 0 900 600"
         width="900"
         height="600"
