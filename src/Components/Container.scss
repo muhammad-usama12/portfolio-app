@@ -2,21 +2,49 @@
 
 $line-height: 2em;
 
+* {
+  z-index: 999;
+}
+
 h1 {
   color: white;
-  display: inline;
   font-size: 50px;
   font-weight: bold;
-  letter-spacing: 2px;
-  cursor: pointer;
-
+  letter-spacing: 3px;
+  display: inline;
   font-family: "Roboto", monospace;
 }
 
-a {
+.word {
   text-decoration: none;
+  display: inline;
   color: black;
   font-family: "Yeseva One", cursive;
+  position: relative;
+}
+
+.word::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  background-color: #fcb900;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease-in-out;
+}
+
+// .word:hover::after {
+//   transform: scaleX(1);
+// }
+
+.word:hover {
+  color: rgb(40, 29, 29);
+
+  transition: text-shadow 0.5s ease-in-out;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fcb900, 0 0 40px #fcb900;
 }
 
 .languages {
@@ -26,21 +54,15 @@ a {
   border-radius: 0px;
   color: rgb(40, 29, 29);
   background-color: #fcb900;
-}
-
-a:hover {
-  color: #000000;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fcb900, 0 0 40px #fcb900;
-}
-
-.rolodex-inner {
-  transform-style: preserve-3d;
-  transition: transform 1s;
+  opacity: 1;
 }
 
 .languages {
-  opacity: 1;
   animation: fade-in-out 10s ease-in-out infinite;
+}
+.rolodex-inner {
+  transform-style: preserve-3d;
+  transition: transform 1s;
 }
 
 @keyframes fade-in-out {
@@ -74,4 +96,11 @@ a:hover {
   // background-color: #a0d052;
   background-color: #ffd900;
   color: rgb(40, 29, 29);
+}
+
+.blob-motion {
+  position: absolute;
+  transform: translateY(-20%);
+  // top: 40%;
+  z-index: -1;
 }
