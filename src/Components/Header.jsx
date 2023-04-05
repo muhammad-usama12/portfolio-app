@@ -3,22 +3,22 @@ import "./Header.scss";
 
 function Header() {
   return (
-    <div>
-      <nav>
-        <a href="/" className="projects">
+    <nav>
+      <ul>
+        <li href="/" className="contact">
+          Contact
+        </li>
+        <li href="/" className="projects">
           Projects
-        </a>
+        </li>
+        <li href="/" className="about">
+          About
+        </li>
         <a href="/" className="name">
           MU
         </a>
-        <a href="/" className="about">
-          About
-        </a>
-        <a href="/" className="contact">
-          Contact
-        </a>
-      </nav>
-    </div>
+      </ul>
+    </nav>
   );
 }
 
