@@ -7,11 +7,10 @@ import Svg from "./components/Svg";
 function App() {
   return (
     <>
-      {/* <div className="bg"></div> */}
+      <Header />
       <div className="app">
-        <Header />
         <Container />
-        <Svg />
+        {/* <Svg /> */}
       </div>
     </>
   );
