@@ -1,19 +1,31 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Header.scss";
 
-function Header() {
+function Header(props) {
   return (
     <nav>
       <ul>
-        <li href="/" className="contact">
-          Contact
-        </li>
-        <li href="/" className="projects">
-          Projects
-        </li>
-        <li href="/" className="about">
-          About
-        </li>
+        <Link to="/contact" style={{ textDecoration: "none" }}>
+          <li href="/" className="contact">
+            {props.contact}
+          </li>
+        </Link>
+        <Link to="/projects" style={{ textDecoration: "none" }}>
+          <li href="/" className="projects">
+            {props.projects}
+          </li>
+        </Link>
+        <Link to="/about" style={{ textDecoration: "none" }}>
+          <li href="/" className="about">
+            {props.about}
+          </li>
+        </Link>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <li href="/" className="about">
+            {props.home}
+          </li>
+        </Link>
         <a href="/" className="name">
           MU
         </a>
