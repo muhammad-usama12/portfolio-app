@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "../Header";
-function Projects() {
+import "./index.scss";
+
+function Contact() {
   return (
     <div>
       <Header
@@ -13,4 +15,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Contact;

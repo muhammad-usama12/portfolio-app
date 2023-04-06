@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Contact from "./Contact";
-import Projects from "./Projects";
-import About from "./About";
-import Container from "../Container";
-import Header from "../Header";
+import Contact from "../Contact/index";
+import Projects from "../Projects/index";
+import About from "../About/index";
+import Container from "../Container/index";
+import Header from "../Header/index";
 
 function AppRoutes() {
   const location = useLocation();
@@ -14,6 +14,7 @@ function AppRoutes() {
       {showNavbar && (
         <Header about={"About"} projects={"Projects"} contact={"Contact"} />
       )}
+
       <Routes>
         <Route exact path="/" element={<Container />}></Route>
         <Route exact path="/about" element={<About />}></Route>

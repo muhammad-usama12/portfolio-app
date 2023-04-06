@@ -1,9 +1,5 @@
 import "./App.scss";
-// import Background from "./Background";
-import Container from "./components/Container";
-
-import Header from "./components/Header";
-import AppRoutes from "./components/Routes/Routes";
+import AppRoutes from "./components/Routes/index";
 
 function App() {
   return (

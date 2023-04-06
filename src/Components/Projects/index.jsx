@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../Header";
-
-function About() {
+import "./index.scss";
+function Projects() {
   return (
     <div>
       <Header
@@ -14,4 +14,4 @@ function About() {
   );
 }
 
-export default About;
+export default Projects;

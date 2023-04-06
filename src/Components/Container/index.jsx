@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-
 import { TypeAnimation } from "react-type-animation";
-import "./Container.scss";
-import Svg from "./Svg";
+import "./index.scss";
+import Svg from "../Svg";
 
 const languages = [
   "Hello, I'm",
