@@ -1,7 +1,29 @@
-.section {
-  display: flex;
-  height: 100vh;
+$primary-color: #fcb900;
 
-  justify-content: center;
-  margin-top: 240px;
+@import 'animate.css';
+
+@font-face {
+  font-family: 'Roboto', monospace;
+  src: url('https://fonts.googleapis.com/css2?family=Alkatra:wght@600&family=IBM+Plex+Mono&family=PT+Serif:wght@700&family=Permanent+Marker&family=Yeseva+One&display=swap');
 }
+@font-face {
+  font-family: 'Roboto', monospace;
+  src: url('https://fonts.googleapis.com/css2?family=Alkatra:wght@600&family=IBM+Plex+Mono&family=PT+Serif:wght@700&family=Permanent+Marker&family=Yeseva+One&display=swap');
+}
+@font-face {
+  font-family: 'Coolvetica';
+  src: url(./assets/fonts/CoolveticaRg-Regular.woff2) format('woff2');
+}
+
+input,
+textarea {
+  font-family: 'Roboto', monospace;
+}
+
+// .section {
+//   display: flex;
+//   height: 100vh;
+
+//   justify-content: center;
+//   margin-top: 240px;
+// }

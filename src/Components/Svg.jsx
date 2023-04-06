@@ -1,43 +1,34 @@
-import React, { useEffect } from "react";
-import KUTE from "kute.js";
-
-// const tween = KUTE.fromTo(
-//   "#blob1",
-//   { path: "#blob1" },
-//   { path: "#blob2" },
-//   { repeat: 999, duration: 3000, yoyo: true }
-// );
-
-// tween.start();
+import React, { useEffect } from 'react'
+import KUTE from 'kute.js'
 
 function Svg() {
   useEffect(() => {
     KUTE.fromTo(
-      "#blob1",
-      { path: "#blob1" },
-      { path: "#blob2" },
-      { repeat: Infinity, duration: 5000, yoyo: true }
-    ).start();
-  });
+      '#blob1',
+      { path: '#blob1' },
+      { path: '#blob2' },
+      { repeat: Infinity, duration: 5000, yoyo: true },
+    ).start()
+  })
   useEffect(() => {
     KUTE.fromTo(
-      "#blob3",
-      { path: "#blob3" },
-      { path: "#blob4" },
-      { repeat: Infinity, duration: 5000, yoyo: true }
-    ).start();
-  });
+      '#blob3',
+      { path: '#blob3' },
+      { path: '#blob4' },
+      { repeat: Infinity, duration: 5000, yoyo: true },
+    ).start()
+  })
   useEffect(() => {
     KUTE.fromTo(
-      "#blob5",
-      { path: "#blob5" },
-      { path: "#blob6" },
-      { repeat: Infinity, duration: 5000, yoyo: true }
-    ).start();
-  });
+      '#blob5',
+      { path: '#blob5' },
+      { path: '#blob6' },
+      { repeat: Infinity, duration: 5000, yoyo: true },
+    ).start()
+  })
   return (
     <div className="blobs">
-      {" "}
+      {' '}
       <svg
         className="blob-motion"
         viewBox="0 0 900 600"
@@ -58,7 +49,7 @@ function Svg() {
             id="blob2"
             d="M111.6 -112.4C139.2 -83.9 152.6 -42 165.5 12.8C178.3 67.6 190.6 135.3 163 176C135.3 216.6 67.6 230.3 16.1 214.2C-35.4 198 -70.7 152 -120.7 111.4C-170.7 70.7 -235.4 35.4 -242.4 -7.1C-249.5 -49.5 -199 -99 -149 -127.5C-99 -156 -49.5 -163.5 -3.8 -159.7C42 -156 83.9 -140.9 111.6 -112.4"
             fill="#59846e"
-            visibility={"hidden"}
+            visibility={'hidden'}
           ></path>
         </g>
       </svg>
@@ -82,7 +73,7 @@ function Svg() {
             id="blob4"
             d="M237.1 -212.4C327.1 -147.1 433.5 -73.5 442.4 8.8C451.2 91.2 362.4 182.4 272.4 247.9C182.4 313.4 91.2 353.2 3.1 350.2C-85.1 347.1 -170.2 301.2 -236.8 235.7C-303.5 170.2 -351.8 85.1 -341 10.7C-330.3 -63.6 -260.6 -127.3 -194 -192.6C-127.3 -258 -63.6 -325 4.9 -329.9C73.5 -334.9 147.1 -277.7 237.1 -212.4"
             fill="#565229"
-            visibility={"hidden"}
+            visibility={'hidden'}
           ></path>
         </g>
       </svg>
@@ -106,7 +97,7 @@ function Svg() {
             id="blob6"
             d="M125.3 -107.6C184.3 -66.3 269.1 -33.1 288.6 19.5C308.1 72.1 262.2 144.2 203.2 189.2C144.2 234.2 72.1 252.1 -6.6 258.7C-85.3 265.3 -170.6 260.6 -205.3 215.6C-240 170.6 -224 85.3 -225.5 -1.5C-227.1 -88.4 -246.1 -176.8 -211.4 -218.1C-176.8 -259.4 -88.4 -253.7 -27.6 -226.1C33.1 -198.5 66.3 -149 125.3 -107.6"
             fill="#eaee5f"
-            visibility={"hidden"}
+            visibility={'hidden'}
           ></path>
         </g>
       </svg>
@@ -200,7 +191,7 @@ function Svg() {
         </g>
       </svg> */}
     </div>
-  );
+  )
 }
 
-export default Svg;
+export default Svg
