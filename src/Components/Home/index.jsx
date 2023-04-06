@@ -10,7 +10,7 @@ const languages = [
   'Hola soy,',
 ]
 
-function Container() {
+function Home() {
   const [currentLanguageIndex, setCurrentLanguageIndex] = useState(0)
 
   useEffect(() => {
@@ -66,4 +66,4 @@ function Container() {
   )
 }
 
-export default Container
+export default Home

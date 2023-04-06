@@ -4,6 +4,7 @@ html {
 
 body {
   min-height: 100%;
+  font: 300 12px/1.4 'Halvetica Neue', 'sans serif';
   color: #444;
   background: white;
   display: block;
