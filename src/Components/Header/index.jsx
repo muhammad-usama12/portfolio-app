@@ -8,12 +8,22 @@ import {
   faUser,
   faEnvelope,
   faFile,
+  faGears,
+  faRectangleList,
+  faRectangleTimes,
+  faRecordVinyl,
+  faUsersRectangle,
+  faProcedures,
+  faWindowRestore,
+  faLaptop,
+  faLaptopCode,
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faLinkedinIn,
   faGithub,
-
-  // faGithub
+  faRProject,
+  faInternetExplorer,
+  faArtstation,
 } from '@fortawesome/free-brands-svg-icons'
 
 function Header(props) {
@@ -28,6 +38,16 @@ function Header(props) {
         </NavLink>
         <NavLink exact="true" activeclassname="active" to="/about">
           <FontAwesomeIcon icon={faUser} color="#6d6d6d" className="about" />
+        </NavLink>
+        <NavLink exact="true" activeclassname="active" to="/skills">
+          <FontAwesomeIcon icon={faGears} color="#6d6d6d" className="skills" />
+        </NavLink>
+        <NavLink exact="true" activeclassname="active" to="/projects">
+          <FontAwesomeIcon
+            icon={faLaptopCode}
+            color="#6d6d6d"
+            className="projects"
+          />
         </NavLink>
         <NavLink exact="true" activeclassname="active" to="/contact">
           <FontAwesomeIcon
