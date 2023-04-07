@@ -86,21 +86,66 @@ h1 {
   letter-spacing: 4px;
   text-decoration: none;
   padding: 10px 18px;
-  border: 2px solid;
+  border: 1px;
   margin-top: 25px;
   float: left;
   background-color: #bebec4;
   white-space: nowrap;
   &:hover {
-    background-color: #a69eb0;
+    background-color: #7d718b;
     color: white;
     border: none;
   }
 }
 
-.blobs {
+// .blobs {
+//   position: absolute;
+//   transform: translateX(90%) translateY(-50%);
+//   animation: fadeIn 1s 1.8s backwards;
+//   z-index: -1;
+// }
+
+canvas {
   position: absolute;
-  transform: translateX(90%) translateY(-50%);
-  animation: fadeIn 1s 1.8s backwards;
+  left: -40%;
+  top: 50%;
+  animation: fadeIn 1s forwards;
+  transform: translateY(-50%);
+  touch-action: auto;
   z-index: -1;
+  &:nth-child(2) {
+    position: absolute;
+    left: -20%;
+    top: 50%;
+  }
+  &:nth-child(3) {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+  }
+  &:nth-child(4) {
+    position: absolute;
+    left: 20%;
+    top: 50%;
+  }
+  &:nth-child(5) {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+  }
+  &:nth-child(6) {
+    position: absolute;
+    left: 60%;
+    top: 50%;
+  }
+  &:nth-child(7) {
+    position: absolute;
+    left: 80%;
+    top: 50%;
+  }
+  &:nth-child(8) {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+  }
 }
