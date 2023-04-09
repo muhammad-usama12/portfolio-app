@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Loader from 'react-loaders';
 import './index.scss';
