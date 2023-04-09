@@ -18,6 +18,55 @@
       position: relative;
       animation: fadeInUp 2s 2s;
       animation-fill-mode: forwards;
+      clear: both;
+    }
+
+    li.half {
+      width: 49%;
+      margin-left: 2%;
+      float: left;
+      clear: none;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    input[type='text'],
+    input[type='email'] {
+      width: 100%;
+      border: 0;
+      background: #c2cd49;
+      color: white;
+      height: 50px;
+      font-size: 16px;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    textarea {
+      width: 100%;
+      border: 0;
+      background: #c2cd49;
+      height: 50px;
+      padding: 20px;
+      color: white;
+      min-height: 150px;
+      box-sizing: border-box;
+    }
+    .submit-btn {
+      color: #c2cd49;
+      background: 0;
+      font: 12px;
+      letter-spacing: 3px;
+      text-decoration: none;
+      padding: 8px 10px;
+      border: 1px solid rgb(119, 134, 61);
+      border-radius: 4px;
+
+      &:hover {
+        background-color: #c2cd49;
+        color: white;
+      }
     }
   }
 }

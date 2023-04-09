@@ -15,16 +15,11 @@ function Contact() {
             <form>
               <ul>
                 <li className="half">
-                  <input
-                    type={'text'}
-                    name="name"
-                    placeholder="Name"
-                    required
-                  />
+                  <input type="text" name="name" placeholder="Name" required />
                 </li>
                 <li className="half">
                   <input
-                    type={'email'}
+                    type="email"
                     name="email"
                     placeholder="Email"
                     required
@@ -32,25 +27,25 @@ function Contact() {
                 </li>
                 <li>
                   <input
-                    type={'text'}
+                    type="text"
                     name="subject"
                     placeholder="Subject"
                     required
                   />
                 </li>
+
                 <li>
-                  <input
-                    type={'text'}
+                  <textarea
                     name="message"
                     placeholder="Message"
                     required
-                  />
+                  ></textarea>
                 </li>
                 <li>
                   <input
                     className="submit-btn"
-                    type={'submit'}
-                    name="submit"
+                    type="submit"
+                    value="Send"
                     placeholder="Submit"
                     required
                   />
