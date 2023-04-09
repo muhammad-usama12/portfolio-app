@@ -9,24 +9,11 @@ import {
   faEnvelope,
   faFile,
   faGears,
-  faRectangleList,
-  faRectangleTimes,
-  faRecordVinyl,
-  faUsersRectangle,
-  faProcedures,
-  faWindowRestore,
-  faLaptop,
   faLaptopCode,
 } from '@fortawesome/free-solid-svg-icons'
-import {
-  faLinkedinIn,
-  faGithub,
-  faRProject,
-  faInternetExplorer,
-  faArtstation,
-} from '@fortawesome/free-brands-svg-icons'
+import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 
-function Header(props) {
+function Header() {
   return (
     <div className="sidebar">
       <Link className="logo" to="/">
@@ -57,7 +44,7 @@ function Header(props) {
           />
         </NavLink>
       </nav>
-      <ul>
+      <ul className="social-links">
         <li>
           <a
             className="linkedin"
