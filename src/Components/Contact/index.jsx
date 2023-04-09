@@ -70,13 +70,9 @@ function Contact() {
                   ></textarea>
                 </li>
                 <li>
-                  <input
-                    className="submit-btn"
-                    type="submit"
-                    value="Send"
-                    placeholder="Submit"
-                    required
-                  />
+                  <button className="submit-btn" type="submit" value="Send">
+                    Send
+                  </button>
                 </li>
               </ul>
             </form>
