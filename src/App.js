@@ -1,11 +1,15 @@
-import "./App.scss";
-import AppRoutes from "./components/Routes/index";
+import './App.scss';
+import AppRoutes from './components/Routes/index';
+import Header from './components/Header';
 
 function App() {
   return (
-    <>
-      <AppRoutes />
-    </>
+    <div className="App">
+      <Header />
+      <div className="page">
+        <AppRoutes />
+      </div>
+    </div>
   );
 }
 

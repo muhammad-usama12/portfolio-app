@@ -4,13 +4,13 @@ html {
 
 body {
   min-height: 100%;
-  font: 300 12px/1.4 'Halvetica Neue', 'sans serif';
+  font: 300 12px/1.4 'Roboto', 'monospace';
   color: #444;
   background: white;
   display: block;
   overflow: hidden;
   margin: 0;
-  font-family: 'Major Mono Display', monospace;
+  font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

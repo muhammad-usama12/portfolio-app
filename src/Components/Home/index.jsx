@@ -41,7 +41,20 @@ function Home() {
   return (
     <div className="text-block">
       <Blob
-        height={700}
+        height={1000}
+        radius={200}
+        friction={0.01}
+        markers={false}
+        speed={1.25}
+        color={'#b2c9ab'}
+        sensitivity={0.3}
+        radial={10}
+        smoothing={true}
+        points={32}
+        elasticity={0.001}
+      />
+      <Blob
+        height={1000}
         radius={200}
         friction={0.01}
         markers={false}
@@ -54,7 +67,7 @@ function Home() {
         elasticity={0.001}
       />
       <Blob
-        height={700}
+        height={1000}
         radius={200}
         friction={0.01}
         markers={false}
@@ -80,7 +93,7 @@ function Home() {
         elasticity={0.001}
       />
       <Blob
-        height={700}
+        height={1000}
         radius={200}
         friction={0.01}
         markers={false}
@@ -93,7 +106,7 @@ function Home() {
         elasticity={0.001}
       />
       <Blob
-        height={700}
+        height={1000}
         radius={200}
         friction={0.01}
         markers={false}
@@ -106,7 +119,7 @@ function Home() {
         elasticity={0.001}
       />
       <Blob
-        height={700}
+        height={1000}
         radius={200}
         friction={0.01}
         markers={false}
@@ -119,7 +132,7 @@ function Home() {
         elasticity={0.001}
       />
       <Blob
-        height={700}
+        height={1000}
         radius={200}
         friction={0.01}
         markers={false}
@@ -131,19 +144,7 @@ function Home() {
         points={32}
         elasticity={0.001}
       />
-      <Blob
-        height={700}
-        radius={200}
-        friction={0.01}
-        markers={false}
-        speed={1.25}
-        color={'#b2c9ab'}
-        sensitivity={0.3}
-        radial={10}
-        smoothing={true}
-        points={32}
-        elasticity={0.001}
-      />
+
       <h1>
         {languages[currentLanguageIndex] === 'سلام، میں ہوں' ||
         languages[currentLanguageIndex] === 'مرحبا أنا' ? (
