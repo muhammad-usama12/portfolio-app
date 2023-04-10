@@ -59,7 +59,12 @@ function Contact() {
                   />
                 </li>
                 <li>
-                  <input type="text" name="subject" placeholder="Subject" />
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    autofocus
+                  />
                 </li>
 
                 <li>
@@ -78,6 +83,17 @@ function Contact() {
             </form>
           </div>
         </div>
+      </div>
+      <div className="info">
+        Muhammad Usama,
+        <br />
+        Toronto, ON
+        <br />
+        Canada
+        <br />
+        <a href="mailto:muhammad.usama12@hotmail.com">
+          muhammad.usama12@hotmail.com
+        </a>
       </div>
     </>
   );
