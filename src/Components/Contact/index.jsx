@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-
 import './index.scss';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import { ColorRing } from 'react-loader-spinner';
@@ -32,15 +31,6 @@ function Contact() {
 
   return (
     <>
-      {/* <Loader type="ball-scale-ripple-multiple" />
-       */}
-      {/* <Triangle
-        color="#4fa94d"
-        ariaLabel="triangle-loading"
-        wrapperClass="loader"
-        className="loader"
-        visible={true}
-      /> */}
       <ColorRing
         visible={true}
         wrapperClass="loader"
