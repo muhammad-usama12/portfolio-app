@@ -1,0 +1,93 @@
+.carousel {
+  width: 100%;
+  top: 10%;
+  left: 0px;
+  transform: translateY(50%);
+  vertical-align: middle;
+
+  position: relative;
+  animation: fadeIn 1.5s 1.8s forwards;
+  z-index: 999;
+
+  .title {
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    transform: translateY(-350%);
+    color: #6d6d6d;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .gallery {
+    padding: 0;
+    margin: 0 auto;
+    // top: 10%;
+
+    height: 250px;
+    width: 250px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: gallery 20s linear infinite;
+  }
+
+  .gallery:hover {
+    animation-play-state: paused;
+  }
+
+  .gallery:hover svg {
+    opacity: 0.2;
+  }
+
+  .gallery span p {
+    border: 3px red solid;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+  }
+  .gallery span {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: rotateY(calc(var(--i) * 51.5deg)) translateZ(400px);
+    transition: all 1s;
+  }
+
+  .gallery span svg {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    -webkit-box-reflect: below 1px
+      linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.137));
+    border: 1px red solid;
+
+    transition: all 1s;
+  }
+
+  .gallery span svg:hover {
+    cursor: pointer;
+    transition: all 1s;
+    transform: scale(1.5);
+    opacity: 1;
+  }
+
+  @keyframes gallery {
+    0% {
+      transform: perspective(1200px) rotateY(0deg);
+    }
+    50% {
+      transform: perspective(1200px) rotateY(-180deg);
+    }
+    100% {
+      transform: perspective(1200px) rotateY(-360deg);
+    }
+  }
+}
