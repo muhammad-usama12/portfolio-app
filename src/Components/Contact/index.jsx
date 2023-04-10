@@ -1,11 +1,13 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
-import Loader from 'react-loaders';
 import './index.scss';
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import { ColorRing } from 'react-loader-spinner';
 
 function Contact() {
   const form = useRef();
+  const position = [43.856098, -79.337021];
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -28,13 +30,22 @@ function Contact() {
       );
   };
 
-  console.log(`${process.env.REACT_APP_SERVICE}`);
-  console.log(`${process.env.REACT_APP_TEMPLATE_ID}`);
-  console.log(`${process.env.REACT_APP_PUBLIC_KEY}`);
-
   return (
     <>
-      <Loader type="ball-scale-ripple-multiple" />
+      {/* <Loader type="ball-scale-ripple-multiple" />
+       */}
+      {/* <Triangle
+        color="#4fa94d"
+        ariaLabel="triangle-loading"
+        wrapperClass="loader"
+        className="loader"
+        visible={true}
+      /> */}
+      <ColorRing
+        visible={true}
+        wrapperClass="loader"
+        colors={['#b2c9ab', '#a69eb0', '#efeff2', '#f2e2cd', '#dadae3']}
+      />
       <div className="container contact-page">
         <div className="text">
           <h1>Contact Me!</h1>
@@ -59,12 +70,7 @@ function Contact() {
                   />
                 </li>
                 <li>
-                  <input
-                    type="text"
-                    name="subject"
-                    placeholder="Subject"
-                    autofocus
-                  />
+                  <input type="text" name="subject" placeholder="Subject" />
                 </li>
 
                 <li>
@@ -87,13 +93,21 @@ function Contact() {
       <div className="info">
         Muhammad Usama,
         <br />
-        Toronto, ON
+        Markham, ON
         <br />
         Canada
         <br />
-        <a href="mailto:muhammad.usama12@hotmail.com">
+        <a className="email-link" href="mailto:muhammad.usama12@hotmail.com">
           muhammad.usama12@hotmail.com
         </a>
+      </div>
+      <div className="map">
+        <MapContainer center={position} zoom={13} scrollWheelZoom={true}>
+          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+          <Marker color={'#fff'} position={position}>
+            <Popup>Hello, there 👋</Popup>
+          </Marker>
+        </MapContainer>
       </div>
     </>
   );
