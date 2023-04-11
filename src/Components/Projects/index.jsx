@@ -5,7 +5,7 @@ import Carousel from '../Carousel';
 import { FaGithub, FaReact, FaSass } from 'react-icons/fa';
 import { TbWorldWww } from 'react-icons/tb';
 import { SiChakraui } from 'react-icons/si';
-import taqwaRec from '../../assets/videos/Taqwa Screen Rec.mov';
+import taqwaRec from '../../assets/videos/Taqwa Screen Rec (Final).mov';
 
 function Projects() {
   return (
