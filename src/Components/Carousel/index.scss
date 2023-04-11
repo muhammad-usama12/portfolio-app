@@ -13,23 +13,51 @@
     position: relative;
     font-size: 24px;
     font-weight: bold;
-    transform: translateY(-350%);
+    transform: translateY(-400%);
     color: #6d6d6d;
     width: 100%;
     text-align: center;
-    z-index: 1;
+    z-index: -1;
   }
 
   .gallery {
     padding: 0;
     margin: 0 auto;
-    // top: 10%;
-
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     position: relative;
     transform-style: preserve-3d;
     animation: gallery 20s linear infinite;
+  }
+  .gallery span video {
+    padding: 0;
+    margin: 0 auto;
+    &:hover {
+      transition: all 1s;
+      transform: scale(3);
+      opacity: 1;
+    }
+  }
+  .gallery:hover video {
+    opacity: 0.2;
+  }
+
+  .gallery span p {
+    align-items: center;
+    color: black;
+    line-height: 150%;
+    border: 1px solid grey;
+    font-size: 14px;
+
+    width: 100%;
+    -webkit-box-reflect: below 2px
+      linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.137));
+    transition: all 1s;
+    &:hover {
+      transition: all 1s;
+      transform: scale(1.5);
+      opacity: 1;
+    }
   }
 
   .gallery:hover {
@@ -40,44 +68,52 @@
     opacity: 0.2;
   }
 
-  .gallery span p {
-    border: 3px red solid;
-    font-size: 20px;
-    top: 0;
-    left: 0;
-    padding-top: 50px;
-  }
   .gallery span {
     height: 100%;
     width: 100%;
     position: absolute;
+    cursor: pointer;
     top: 0;
     left: 0;
     transform-style: preserve-3d;
     transform-origin: center;
-    transform: rotateY(calc(var(--i) * 51.5deg)) translateZ(400px);
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(500px);
     transition: all 1s;
   }
 
   .gallery span svg {
     height: 100%;
     width: 100%;
-    top: 0;
-    left: 0;
+
     object-fit: cover;
     -webkit-box-reflect: below 1px
       linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.137));
-    border: 1px red solid;
-
     transition: all 1s;
+    &:hover {
+      cursor: pointer;
+      transition: all 1s;
+      transform: scale(1.5);
+      opacity: 1;
+    }
   }
 
-  .gallery span svg:hover {
-    cursor: pointer;
-    transition: all 1s;
-    transform: scale(1.5);
-    opacity: 1;
+  .gallery span a {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &:hover {
+      cursor: pointer;
+      transition: all 1s;
+      transform: scale(1);
+      opacity: 1;
+    }
   }
+
+  // .gallery span svg:hover {
+  // }
+  // // .gallery span a:hover {
+  // // }
 
   @keyframes gallery {
     0% {

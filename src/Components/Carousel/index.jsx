@@ -9,19 +9,47 @@ const Carousel = (props) => {
           {props.text}
         </h2>
         <div className="gallery">
-          <span style={{ '--i': 1 }}>
-            {props.icon1}
-            <a href="https://www.google.ca" target={'_blank'} rel="noreferrer">
-              {' '}
-              TEST LINK
-            </a>
+          <span style={{ '--i': 1, display: 'flex', alignItems: 'center' }}>
+            {props.description}
           </span>
-          <span style={{ '--i': 2 }}>{props.icon2}</span>
-          <span style={{ '--i': 3 }}>{props.icon3}</span>
-          <span style={{ '--i': 4 }}>{props.icon4}</span>
-          <span style={{ '--i': 5 }}>{props.icon5}</span>
-          <span style={{ '--i': 6 }}>{props.icon6}</span>
-          <span style={{ '--i': 7 }}>{props.icon7}</span>
+          <span style={{ '--i': 2, display: 'flex', alignItems: 'center' }}>
+            {' '}
+            {props.media}
+          </span>
+          <span style={{ '--i': 3, display: 'flex', alignItems: 'center' }}>
+            {props.website}
+          </span>
+          <span style={{ '--i': 4, display: 'flex', alignItems: 'center' }}>
+            {props.github}
+          </span>{' '}
+          <span
+            style={{
+              '--i': 5,
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            {props.stack}
+          </span>
+          <span style={{ '--i': 6, display: 'flex', alignItems: 'center' }}>
+            {props.stack2}
+          </span>
+          <span
+            className="ui"
+            style={{ '--i': 7, display: 'flex', alignItems: 'center' }}
+          >
+            {props.ui}
+          </span>
+          <span
+            style={{
+              '--i': 8,
+              display: 'grid',
+              alignItems: 'center',
+              justifyItems: 'center',
+            }}
+          >
+            {props.api}
+          </span>
         </div>
       </div>
     </>
