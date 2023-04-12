@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import './index.scss'
-import LogoU from '../../assets/images/logo-u3.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import './index.scss';
+import LogoU from '../../assets/images/logo-u3.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHouse,
   faUser,
@@ -10,33 +10,56 @@ import {
   faFile,
   faGears,
   faLaptopCode,
-} from '@fortawesome/free-solid-svg-icons'
-import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
+  faBars,
+} from '@fortawesome/free-solid-svg-icons';
+import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function Header() {
+  const [showNav, setShowNav] = useState(false);
+
+  const toggleNav = () => {
+    setShowNav(!showNav);
+  };
+
   return (
     <div className="sidebar">
-      <Link className="logo" to="/">
+      <Link className="logo" to="/" onClick={() => setShowNav(false)}>
         <img src={LogoU} alt="logo" />
       </Link>
-      <nav>
+
+      <nav className={showNav ? 'mobile-show' : ''}>
         <NavLink exact="true" activeclassname="active" to="/">
           <FontAwesomeIcon icon={faHouse} color="#6d6d6d" className="home" />
         </NavLink>
-        <NavLink exact="true" activeclassname="active" to="/about">
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          to="/about"
+          onClick={() => setShowNav(false)}
+        >
           <FontAwesomeIcon icon={faUser} color="#6d6d6d" className="about" />
         </NavLink>
         <NavLink exact="true" activeclassname="active" to="/skills">
           <FontAwesomeIcon icon={faGears} color="#6d6d6d" className="skills" />
         </NavLink>
-        <NavLink exact="true" activeclassname="active" to="/projects">
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          to="/projects"
+          onClick={() => setShowNav(false)}
+        >
           <FontAwesomeIcon
             icon={faLaptopCode}
             color="#6d6d6d"
             className="projects"
           />
         </NavLink>
-        <NavLink exact="true" activeclassname="active" to="/contact">
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          to="/contact"
+          onClick={() => setShowNav(false)}
+        >
           <FontAwesomeIcon
             icon={faEnvelope}
             color="#6d6d6d"
@@ -75,8 +98,15 @@ function Header() {
           </a>
         </li>
       </ul>
+      <FontAwesomeIcon
+        onClick={toggleNav}
+        icon={faBars}
+        color="#ffd700"
+        size="3x"
+        className="open-icon"
+      />
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
