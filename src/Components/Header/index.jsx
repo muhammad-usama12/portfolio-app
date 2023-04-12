@@ -19,6 +19,7 @@ function Header() {
 
   const toggleNav = () => {
     setShowNav(!showNav);
+    document.querySelector('nav').classList.toggle('mobile-show');
   };
 
   return (
@@ -27,39 +28,24 @@ function Header() {
         <img src={LogoU} alt="logo" />
       </Link>
 
-      <nav className={showNav ? 'mobile-show' : ''}>
+      <nav className={`${showNav ? 'mobile-show ' : 'hide'}`}>
         <NavLink exact="true" activeclassname="active" to="/">
           <FontAwesomeIcon icon={faHouse} color="#6d6d6d" className="home" />
         </NavLink>
-        <NavLink
-          exact="true"
-          activeclassname="active"
-          to="/about"
-          onClick={() => setShowNav(false)}
-        >
+        <NavLink exact="true" activeclassname="active" to="/about">
           <FontAwesomeIcon icon={faUser} color="#6d6d6d" className="about" />
         </NavLink>
         <NavLink exact="true" activeclassname="active" to="/skills">
           <FontAwesomeIcon icon={faGears} color="#6d6d6d" className="skills" />
         </NavLink>
-        <NavLink
-          exact="true"
-          activeclassname="active"
-          to="/projects"
-          onClick={() => setShowNav(false)}
-        >
+        <NavLink exact="true" activeclassname="active" to="/projects">
           <FontAwesomeIcon
             icon={faLaptopCode}
             color="#6d6d6d"
             className="projects"
           />
         </NavLink>
-        <NavLink
-          exact="true"
-          activeclassname="active"
-          to="/contact"
-          onClick={() => setShowNav(false)}
-        >
+        <NavLink exact="true" activeclassname="active" to="/contact">
           <FontAwesomeIcon
             icon={faEnvelope}
             color="#6d6d6d"
@@ -67,7 +53,7 @@ function Header() {
           />
         </NavLink>
       </nav>
-      <ul className="social-links">
+      <ul className={`social-links${!showNav ? '' : '-mobile'}`}>
         <li>
           <a
             className="linkedin"
@@ -103,7 +89,7 @@ function Header() {
         icon={faBars}
         color="#ffd700"
         size="3x"
-        className="open-icon"
+        className="stack"
       />
     </div>
   );
