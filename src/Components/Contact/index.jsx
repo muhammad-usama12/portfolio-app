@@ -2,9 +2,18 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './index.scss';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
-import { ColorRing } from 'react-loader-spinner';
+import {
+  Heading,
+  useMediaQuery,
+  Text,
+  Container,
+  VStack,
+} from '@chakra-ui/react';
 
 function Contact() {
+  const [forMobile] = useMediaQuery(
+    '(min-width: 300px) and (max-width: 900px)',
+  );
   const form = useRef();
   const position = [43.856098, -79.337021];
   const sendEmail = (e) => {
@@ -31,15 +40,27 @@ function Contact() {
 
   return (
     <>
-      <ColorRing
-        visible={true}
-        wrapperClass="loader"
-        colors={['#b2c9ab', '#a69eb0', '#efeff2', '#f2e2cd', '#dadae3']}
-      />
       <div className="container contact-page">
-        <div className="text">
-          <h1>Contact Me!</h1>
-          <p>Let's brew up some ideas over a cup of coffee.</p>
+        <VStack
+          display={'grid'}
+          justifyItems={'start'}
+          pos={'absolute'}
+          left={'150px'}
+        >
+          <Heading
+            pt={forMobile ? '100px' : '50px'}
+            textAlign={'center'}
+            fontSize={forMobile ? '30px' : '50px'}
+            marginBottom={'30px'}
+            fontFamily={'Yeseva One, cursive'}
+          >
+            CONTACT ME!
+          </Heading>
+          <Text fontSize={'large'}>
+            Let's brew up some ideas over a cup of coffee.
+          </Text>
+        </VStack>
+        <Container className="text">
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
               <ul>
@@ -78,7 +99,7 @@ function Contact() {
               </ul>
             </form>
           </div>
-        </div>
+        </Container>
       </div>
       <div className="info">
         Muhammad Usama,
@@ -92,7 +113,7 @@ function Contact() {
         </a>
       </div>
       <div className="map">
-        <MapContainer center={position} zoom={13} scrollWheelZoom={true}>
+        <MapContainer center={position} zoom={12} scrollWheelZoom={true}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           <Marker color={'#fff'} position={position}>
             <Popup>Hello, there 👋</Popup>
@@ -102,5 +123,4 @@ function Contact() {
     </>
   );
 }
-
 export default Contact;

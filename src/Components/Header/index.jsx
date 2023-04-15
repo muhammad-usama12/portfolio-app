@@ -53,7 +53,7 @@ function Header() {
         </NavLink>
       </nav>
       <ul>
-        <div className={`social-links${showNav ? '-show' : '-hide'}`}>
+        <div className={`social${showNav ? '-show' : '-hide'}`}>
           <li>
             <a
               className="linkedin"
@@ -79,7 +79,10 @@ function Header() {
             </a>
           </li>
           <li>
-            <a target="_blank" rel="noreferrer" href="/">
+            <a
+              href="../../assets/images/Muhammad Usama(Resume).pdf"
+              download="Muhammad Usama(Resume).pdf"
+            >
               <FontAwesomeIcon icon={faFile} color="#6d6d6d" />
             </a>
           </li>

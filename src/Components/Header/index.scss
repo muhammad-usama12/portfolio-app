@@ -1,11 +1,10 @@
 .sidebar {
-  background: #e4e4e8;
+  background: #444444;
   width: 60px;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
-  z-index: 3;
-  // min-height: 500px;
+  z-index: 999;
 
   .logo {
     display: block;
@@ -67,26 +66,37 @@ nav {
     &:first-child {
       &:after {
         content: 'HOME';
+        color: #fdcd37;
+
+        font-weight: 500;
       }
     }
     &:nth-child(2) {
       &:after {
         content: 'ABOUT';
+        color: #fdcd37;
+        font-weight: 500;
       }
     }
     &:nth-child(3) {
       &:after {
         content: 'SKILLS';
+        color: #fdcd37;
+        font-weight: 500;
       }
     }
     &:nth-child(4) {
       &:after {
         content: 'PROJECTS';
+        color: #fdcd37;
+        font-weight: 500;
       }
     }
     &:nth-child(5) {
       &:after {
         content: 'CONTACT';
+        color: #fdcd37;
+        font-weight: 500;
       }
     }
   }
@@ -97,11 +107,11 @@ nav {
   }
 }
 
-ul,
-nav {
+ul {
   position: absolute;
   display: block;
   list-style: none;
+  overflow: hidden;
   width: 100%;
   bottom: 20px;
   margin: 0;
@@ -121,14 +131,12 @@ nav {
 .stack {
   display: none;
 }
-// .social-links {
-//   display: none;
-// }
 
 // Media Queries
 
-@media only screen and (min-width: 300px) and (max-width: 900px) {
+@media only screen and (min-width: 300px) and (max-width: 1039px) {
   .sidebar {
+    position: absolute;
     width: 100%;
     height: 53px;
     z-index: 5;
@@ -146,10 +154,9 @@ nav {
 
     nav {
       width: 100%;
-      position: absolute;
+      position: relative;
       overflow: hidden;
       height: 50px;
-      top: 0;
       margin-top: 0;
 
       &.mobile-show {
@@ -159,8 +166,9 @@ nav {
         opacity: 1;
         position: absolute;
         top: 53px;
-        background-color: #e4e4e8;
-        animation: slide-in 0.75s ease forwards;
+        background-color: #444444;
+        transform: translateX(0%);
+        transition: transform 0.75s ease-in;
       }
 
       &.mobile-hide {
@@ -170,26 +178,16 @@ nav {
         opacity: 1;
         position: absolute;
         top: 53px;
-        background-color: #e4e4e8;
-        animation: slide-out 1s ease forwards;
+        background-color: #444444;
+        transform: translateX(100%);
+        transition: transform 0.75s ease-out;
       }
 
-      @keyframes slide-in {
-        from {
-          right: -100%;
-        }
-        to {
-          right: 0;
-        }
+      &.mobile-show {
+        transform: translateX(0%);
       }
-
-      @keyframes slide-out {
-        from {
-          right: 0%;
-        }
-        to {
-          right: -100%;
-        }
+      &.mobile-hide {
+        transform: translateX(-100%);
       }
 
       a {
@@ -211,7 +209,7 @@ nav {
           &:after {
             content: 'HOME';
             font-size: 14px;
-            font-weight: 900;
+            font-weight: 400;
             padding: 22px 22px 0 0;
           }
         }
@@ -219,16 +217,16 @@ nav {
           &:after {
             content: 'ABOUT';
             font-size: 14px;
-            font-weight: 900;
             padding: 22px 22px 0 0;
+            font-weight: 400;
           }
         }
         &:nth-child(3) {
           &:after {
             content: 'SKILLS';
             font-size: 14px;
-            font-weight: 900;
 
+            font-weight: 400;
             padding: 22px 22px 0 0;
           }
         }
@@ -250,50 +248,64 @@ nav {
         }
       }
       a.active {
-        color: #a2ad23;
+        color: #433407;
       }
     }
 
     .stack {
       position: absolute;
-      top: 11px;
+      top: 18px;
       right: 15px;
-      display: block;
       display: flex;
       list-style: none;
+      font-size: 25px;
       z-index: 4;
     }
 
-    .social-links-show {
+    .social-show {
       display: flex;
       justify-content: space-evenly;
       position: relative;
       top: 10px;
       list-style: none;
       padding: 0 50px 0 50px;
-      animation: slide-in 0.75s ease forwards;
+      text-align: center;
+      transform: translateX(0%);
+      transition: transform 0.75s ease-in;
+
       li {
         a {
           padding: 7px 0;
+
+          font-size: 18px;
+        }
+      }
+    }
+    .social-hide {
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      top: 10px;
+      list-style: none;
+      padding: 0 50px 0 50px;
+      text-align: center;
+      transform: translateX(100%);
+      transition: transform 0.75s ease-out;
+
+      li {
+        a {
+          padding: 7px 0;
+
           font-size: 18px;
         }
       }
     }
 
-    .social-links-hide {
-      display: flex;
-      justify-content: space-evenly;
-      position: relative;
-      top: 10px;
-      list-style: none;
-      padding: 0 50px 0 50px;
-      animation: slide-out 1s ease forwards;
+    &.social-show {
+      transform: translateX(0%);
     }
-    li {
-      a {
-        padding: 7px 0;
-        font-size: 18px;
-      }
+    &.social-hide {
+      transform: translateX(100%);
     }
   }
 }

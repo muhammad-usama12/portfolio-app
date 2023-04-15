@@ -1,19 +1,34 @@
 import React from 'react';
 import './index.scss';
-import { ColorRing } from 'react-loader-spinner';
+import { Heading, Box, useMediaQuery, Flex } from '@chakra-ui/react';
 
 function Skills() {
+  const [forMobile] = useMediaQuery(
+    '(min-width: 300px) and (max-width: 900px)',
+  );
   return (
     <>
-      <div className="container project-page">
-        <div className="text"></div>
-      </div>
-      <ColorRing
-        visible={true}
-        wrapperClass="loader"
-        colors={['#b2c9ab', '#a69eb0', '#a5b6c4', '#f2e2cd', '#d4d4dc']}
-      />
-      ;
+      <Box width={'100%'} zIndex={3}>
+        <Flex
+          zIndex={999}
+          p={4}
+          flexDirection="column"
+          justifyContent={'space-between'}
+          maxW="900px"
+          mx="auto"
+          marginBottom={5}
+        >
+          <Heading
+            pt={forMobile ? '100px' : '50px'}
+            textAlign={'center'}
+            fontSize={forMobile ? '30px' : '50px'}
+            marginBottom={'30px'}
+            fontFamily={'Yeseva One, cursive'}
+          >
+            SKILLS
+          </Heading>
+        </Flex>
+      </Box>
     </>
   );
 }

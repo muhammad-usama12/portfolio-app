@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import { TypeAnimation } from 'react-type-animation'
-import './index.scss'
-import { Link } from 'react-router-dom'
-import { Blob } from 'react-interactive-blob'
+import React, { useState, useEffect } from 'react';
+import { TypeAnimation } from 'react-type-animation';
+import './index.scss';
+import { Link } from 'react-router-dom';
+import { Blob } from 'react-interactive-blob';
 
 const languages = [
   "Hello, I'm",
@@ -13,10 +13,15 @@ const languages = [
   'سلام، میں ہوں',
   'مرحبا أنا',
   'नमस्ते, मैं हूँ',
-]
+];
 
 function Home() {
-  const [currentLanguageIndex, setCurrentLanguageIndex] = useState(0)
+  const [currentLanguageIndex, setCurrentLanguageIndex] = useState(0);
+
+  const blobSpec = {
+    h: 400,
+    w: 150,
+  };
 
   const name = (
     <a
@@ -28,47 +33,35 @@ function Home() {
       {' '}
       Usama
     </a>
-  )
+  );
 
   useEffect(() => {
     const intervalId = setTimeout(() => {
-      setCurrentLanguageIndex((currentLanguageIndex + 1) % languages.length)
-    }, 10000)
+      setCurrentLanguageIndex((currentLanguageIndex + 1) % languages.length);
+    }, 10000);
 
-    return () => clearTimeout(intervalId)
-  }, [currentLanguageIndex])
+    return () => clearTimeout(intervalId);
+  }, [currentLanguageIndex]);
 
   return (
     <div className="text-block">
       <Blob
-        height={1000}
-        radius={200}
+        height={blobSpec.h}
+        radius={blobSpec.w}
         friction={0.01}
         markers={false}
         speed={1.25}
-        color={'#b2c9ab'}
+        color={'#f5ecec'}
         sensitivity={0.3}
         radial={10}
         smoothing={true}
         points={32}
         elasticity={0.001}
       />
+
       <Blob
-        height={1000}
-        radius={200}
-        friction={0.01}
-        markers={false}
-        speed={1.25}
-        color={'#a69eb0'}
-        sensitivity={0.3}
-        radial={10}
-        smoothing={true}
-        points={32}
-        elasticity={0.001}
-      />
-      <Blob
-        height={1000}
-        radius={200}
+        height={blobSpec.h}
+        radius={blobSpec.w}
         friction={0.01}
         markers={false}
         speed={1.25}
@@ -80,21 +73,8 @@ function Home() {
         elasticity={0.001}
       />
       <Blob
-        height={700}
-        radius={200}
-        friction={0.01}
-        markers={false}
-        speed={1.25}
-        color={'#f2e2cd'}
-        sensitivity={0.3}
-        radial={10}
-        smoothing={true}
-        points={32}
-        elasticity={0.001}
-      />
-      <Blob
-        height={1000}
-        radius={200}
+        height={blobSpec.h}
+        radius={blobSpec.w}
         friction={0.01}
         markers={false}
         speed={1.25}
@@ -105,9 +85,10 @@ function Home() {
         points={32}
         elasticity={0.001}
       />
+
       <Blob
-        height={1000}
-        radius={200}
+        height={blobSpec.h}
+        radius={blobSpec.w}
         friction={0.01}
         markers={false}
         speed={1.25}
@@ -119,25 +100,26 @@ function Home() {
         elasticity={0.001}
       />
       <Blob
-        height={1000}
-        radius={200}
+        height={blobSpec.h}
+        radius={blobSpec.w}
         friction={0.01}
         markers={false}
         speed={1.25}
-        color={'#a5b6c4'}
+        color={'#f2e2cd'}
         sensitivity={0.3}
         radial={10}
         smoothing={true}
         points={32}
         elasticity={0.001}
       />
+
       <Blob
-        height={1000}
-        radius={200}
+        height={blobSpec.h}
+        radius={blobSpec.w}
         friction={0.01}
         markers={false}
         speed={1.25}
-        color={'#d4d4dc'}
+        color={'#a69eb0'}
         sensitivity={0.3}
         radial={10}
         smoothing={true}
@@ -152,7 +134,7 @@ function Home() {
             {name}
             <span className="languages">
               {' '}
-              {languages[currentLanguageIndex]}{' '}
+              {languages[currentLanguageIndex]}
             </span>
           </>
         ) : (
@@ -165,6 +147,7 @@ function Home() {
           </>
         )}
       </h1>
+
       <div className="type-animation">
         <span>I'm a </span>
         <TypeAnimation
@@ -173,9 +156,9 @@ function Home() {
           deletionSpeed={{ type: 'keyStrokeDelayInMs', value: 100 }}
           sequence={[
             'problem solver',
-            'fast learner',
-            'logical thinker',
-            'full-stack developer',
+            'quick learner',
+            'collaborative team player',
+            'result oriented',
           ]}
         />
       </div>
@@ -183,7 +166,7 @@ function Home() {
         Let's Chat!
       </Link>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

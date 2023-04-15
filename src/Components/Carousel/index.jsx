@@ -1,13 +1,14 @@
 import './index.scss';
 import React from 'react';
+import { Heading } from '@chakra-ui/react';
 
 const Carousel = (props) => {
   return (
     <>
       <div className="carousel">
-        <h2 className="title" align="center">
+        <Heading fontFamily={'Caveat, sans serif'} align="center">
           {props.text}
-        </h2>
+        </Heading>
         <div className="gallery">
           <span style={{ '--i': 1, display: 'flex', alignItems: 'center' }}>
             {props.description}

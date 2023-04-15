@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import KUTE from 'kute.js'
+import React, { useEffect } from 'react';
+import KUTE from 'kute.js';
 
 function Svg() {
   // useEffect(() => {
@@ -24,8 +24,8 @@ function Svg() {
       { path: '#blob5' },
       { path: '#blob6' },
       { repeat: Infinity, duration: 5000, yoyo: true },
-    ).start()
-  })
+    ).start();
+  });
   return (
     <div className="blobs">
       {' '}
@@ -54,7 +54,7 @@ function Svg() {
         </g>
       </svg>
     </div>
-  )
+  );
 }
 
-export default Svg
+export default Svg;
