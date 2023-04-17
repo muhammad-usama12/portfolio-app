@@ -5,9 +5,10 @@ import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import {
   Heading,
   useMediaQuery,
-  Text,
   Container,
   VStack,
+  Text,
+  FormControl,
 } from '@chakra-ui/react';
 
 function Contact() {
@@ -40,28 +41,23 @@ function Contact() {
 
   return (
     <>
-      <div className="container contact-page">
-        <VStack
-          display={'grid'}
-          justifyItems={'start'}
-          pos={'absolute'}
-          left={'150px'}
-        >
+      <Container className="container ">
+        <VStack className="contact-title">
           <Heading
             pt={forMobile ? '100px' : '50px'}
             textAlign={'center'}
             fontSize={forMobile ? '30px' : '50px'}
-            marginBottom={'30px'}
+            marginBottom={forMobile ? '10px' : '30px'}
             fontFamily={'Yeseva One, cursive'}
           >
             CONTACT ME!
           </Heading>
-          <Text fontSize={'large'}>
+          <Text fontWeight={'semibold'}>
             Let's brew up some ideas over a cup of coffee.
           </Text>
         </VStack>
         <Container className="text">
-          <div className="contact-form">
+          <FormControl className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
@@ -98,9 +94,9 @@ function Contact() {
                 </li>
               </ul>
             </form>
-          </div>
+          </FormControl>
         </Container>
-      </div>
+      </Container>
       <div className="info">
         Muhammad Usama,
         <br />
