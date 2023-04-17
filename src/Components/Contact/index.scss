@@ -171,6 +171,12 @@
   }
 }
 
+.blobs-contact {
+  position: absolute;
+  top: -15%;
+  left: 7%;
+  z-index: -1;
+}
 @media screen and (min-width: 551px) and (max-width: 1200px) {
   .container {
     width: 100%;
@@ -210,6 +216,12 @@
     top: auto;
     right: 5%;
     bottom: 50px;
+  }
+  .blobs-contact {
+    position: absolute;
+    top: -15%;
+    left: 7%;
+    z-index: -1;
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 550px) {
@@ -254,5 +266,9 @@
     width: 70.5%;
     position: static;
     clear: both;
+  }
+  .blobs-contact {
+    left: -262px;
+    z-index: -1;
   }
 }
