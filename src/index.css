@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;700&family=Yeseva+One&display=swap');
+
 html {
   font-size: 60%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Yeseva One', cursive;
+  color: #fdcd37;
 }
 
 body {
