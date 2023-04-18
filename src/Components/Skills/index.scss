@@ -1,0 +1,45 @@
+.skills-gallery {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  margin: 32px;
+}
+.skills-gallery span {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.skills-gallery svg {
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.137));
+  // transition: all 1s;
+}
+// .skill-logos {
+//   height: 100%;
+//   width: 100%;
+//   position: absolute;
+//   // cursor: pointer;
+//   top: 0;
+//   left: 0;
+// }
+
+.skill-logos {
+  animation: rotation3d 20s infinite linear;
+  transform-style: preserve-3d;
+}
+
+@keyframes rotation3d {
+  from {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  to {
+    transform: rotateY(360deg) translateZ(0px);
+  }
+}
+
+h2 {
+}
