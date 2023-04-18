@@ -6,16 +6,8 @@
   animation: fadeIn 1.5s 1.8s forwards;
   z-index: 0;
 
-  .title {
-    font-family: 'Caveat', cursive;
-    position: relative;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 40px;
-    color: #984e4e;
-    width: 100%;
+  .carousel-title {
     text-align: center;
-    z-index: -1;
   }
 
   .gallery {
@@ -75,7 +67,7 @@
     left: 0;
     transform-style: preserve-3d;
     transform-origin: center;
-    transform: rotateY(calc(var(--i) * 45deg)) translateZ(500px);
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(700px);
     transition: all 1s;
   }
 
@@ -110,61 +102,91 @@
 
   @keyframes gallery {
     0% {
-      transform: perspective(1500px) rotateY(0deg);
+      transform: perspective(1200px) rotateY(0deg);
     }
     50% {
-      transform: perspective(1500px) rotateY(-180deg);
+      transform: perspective(1200px) rotateY(-180deg);
     }
     100% {
-      transform: perspective(1500px) rotateY(-360deg);
+      transform: perspective(1200px) rotateY(-360deg);
     }
   }
 }
+// @media only screen and (min-width: 300px) and (max-width: 1039px) {
+//   .gallery span {
+//     transform: rotateY(calc(var(--i) * 45deg)) translateZ(500px);
+//   }
+// }
 
-// Small - Midsized Phones
-@media only screen and (min-width: 1040px) and (max-width: 2000px) {
+// @media only screen and (min-width: 300px) and (max-width: 1039px) {}
+
+@media only screen and (max-width: 1500px) {
   .carousel {
-    width: 100%;
-    top: 10%;
-    left: 0px;
-    position: relative;
-    animation: fadeIn 1.5s 1.8s forwards;
-    z-index: 0;
-
-    .title {
-      font-size: 24px;
-      margin-bottom: 40px;
-      color: #d87326;
-      background-color: #6d6d6d;
-      z-index: -1;
-    }
+    transform: translateY(-50px);
 
     .gallery {
       padding: 0;
       margin: 0 auto;
       height: 150px;
       width: 150px;
-      position: relative;
-      transform-style: preserve-3d;
-      animation: gallery 75s linear infinite;
     }
-    .gallery span video {
-      padding: 0;
-      margin: 0 auto;
-      &:hover {
-        transition: all 1s;
-        transform: scale(3);
-        opacity: 1;
+
+    .gallery span {
+      transform: rotateY(calc(var(--i) * 45deg)) translateZ(500px);
+    }
+
+    @keyframes gallery {
+      0% {
+        transform: perspective(900px) rotateY(0deg);
+      }
+      50% {
+        transform: perspective(900px) rotateY(-180deg);
+      }
+      100% {
+        transform: perspective(900px) rotateY(-360deg);
       }
     }
-    .gallery:hover video {
-      opacity: 0.2;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .carousel {
+    transform: translateY(-50px);
+
+    .gallery {
+      padding: 0;
+      margin: 0 auto;
+      height: 150px;
+      width: 150px;
+    }
+
+    .gallery span {
+      transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    }
+
+    @keyframes gallery {
+      0% {
+        transform: perspective(1000px) rotateY(0deg);
+      }
+      50% {
+        transform: perspective(1000px) rotateY(-180deg);
+      }
+      100% {
+        transform: perspective(1000px) rotateY(-360deg);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .carousel {
+    .gallery {
+      padding: 0;
+      margin: 0 auto;
+      height: 100px;
+      width: 100px;
     }
 
     .gallery span p {
-      align-items: center;
-      color: black;
-      line-height: 150%;
+      line-height: 100%;
       border: 1px solid grey;
       font-size: 14px;
 
@@ -179,350 +201,50 @@
       }
     }
 
-    .gallery:hover {
-      animation-play-state: paused;
-    }
-
-    .gallery:hover svg {
-      opacity: 0.2;
-    }
-
     .gallery span {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      transform-style: preserve-3d;
-      transform-origin: center;
-      transform: rotateY(calc(var(--i) * 45deg)) translateZ(500px);
-      transition: all 1s;
-    }
-
-    .gallery span svg {
-      height: 100%;
-      width: 100%;
-
-      object-fit: cover;
-      -webkit-box-reflect: below 1px
-        linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.137));
-      transition: all 1s;
-      &:hover {
-        cursor: pointer;
-        transition: all 1s;
-        transform: scale(1.5);
-        opacity: 1;
-      }
-    }
-
-    .gallery span a {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-
-      &:hover {
-        cursor: pointer;
-        transition: all 1s;
-        transform: scale(1);
-        opacity: 1;
-      }
+      transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
     }
 
     @keyframes gallery {
       0% {
-        transform: perspective(1500px) rotateY(0deg);
+        transform: perspective(850px) rotateY(0deg);
       }
       50% {
-        transform: perspective(1500px) rotateY(-180deg);
+        transform: perspective(850px) rotateY(-180deg);
       }
       100% {
-        transform: perspective(1500px) rotateY(-360deg);
+        transform: perspective(850px) rotateY(-360deg);
       }
     }
   }
 }
-@media only screen and (min-width: 300px) and (max-width: 1039px) {
+@media only screen and (max-width: 425px) {
   .carousel {
-    width: 100%;
-    vertical-align: middle;
-    position: relative;
-    animation: fadeIn 1.5s 1.8s forwards;
-    z-index: 999;
-    transform: translateY(-30px);
-
-    .title {
-      position: relative;
-      margin-top: 60px;
-
-      font-size: 24px;
-      font-weight: bold;
-      color: #6d6d6d;
-      width: 100%;
-      text-align: center;
-      z-index: -1;
-    }
-
     .gallery {
       padding: 0;
       margin: 0 auto;
-      height: 75px;
-      width: 75px;
-      position: relative;
-      transform-style: preserve-3d;
-      animation: gallery 100s linear infinite;
-    }
-    .gallery span video {
-      padding: 0;
-      margin: 0 auto;
-      &:hover {
-        transition: all 1s;
-        transform: scale(3);
-        opacity: 1;
-      }
-    }
-    .gallery:hover video {
-      opacity: 0.2;
+      height: 100px;
+      width: 100px;
     }
 
     .gallery span p {
-      align-items: center;
-      color: black;
-      border: 1px solid grey;
-      font-size: 8px;
-      font-weight: 500;
-
-      width: 100%;
-      -webkit-box-reflect: below 2px
-        linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.137));
-      transition: all 1s;
-      &:hover {
-        transition: all 1s;
-        transform: scale(1.5);
-        opacity: 1;
-      }
-    }
-
-    .gallery:hover {
-      animation-play-state: paused;
-    }
-
-    .gallery:hover svg {
-      opacity: 0.2;
+      line-height: 100%;
     }
 
     .gallery span {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      transform-style: preserve-3d;
-      transform-origin: center;
-      transform: rotateY(calc(var(--i) * 45deg)) translateZ(150px);
-      transition: all 1s;
-    }
-
-    .gallery span svg {
-      height: 100%;
-      width: 100%;
-
-      object-fit: cover;
-      -webkit-box-reflect: below 1px
-        linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.137));
-      transition: all 1s;
-      &:hover {
-        cursor: pointer;
-        transition: all 1s;
-        transform: scale(1.5);
-        opacity: 1;
-      }
-    }
-
-    .gallery span a {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-
-      &:hover {
-        cursor: pointer;
-        transition: all 1s;
-        transform: scale(1);
-        opacity: 1;
-      }
+      transform: rotateY(calc(var(--i) * 45deg)) translateZ(175px);
     }
 
     @keyframes gallery {
       0% {
-        transform: perspective(2000px) rotateY(0deg);
+        transform: perspective(450px) rotateY(0deg);
       }
       50% {
-        transform: perspective(2000px) rotateY(-180deg);
+        transform: perspective(450px) rotateY(-180deg);
       }
       100% {
-        transform: perspective(2000px) rotateY(-360deg);
+        transform: perspective(450px) rotateY(-360deg);
       }
     }
   }
 }
-
-// // Tablet - Laptop
-// @media only screen and (min-width: 601px) and (max-width: 1440px) {
-//   .projects-carousel {
-//     position: absolute;
-
-//     width: 100%;
-//     height: 100vh;
-//     justify-content: space-between;
-//   }
-//   .projects-carousel-2 {
-//     position: absolute;
-//     width: 100%;
-//     height: 100vh;
-//     justify-content: space-between;
-
-//     transform: translateY(330px);
-//   }
-//   .projects-carousel-3 {
-//     position: absolute;
-//     width: 100%;
-//     height: 100vh;
-//     justify-content: space-between;
-
-//     transform: translateY(650px);
-//   }
-//   .projects-carousel-4 {
-//     position: absolute;
-//     width: 100%;
-//     height: 100vh;
-//     justify-content: space-between;
-
-//     transform: translateY(650px);
-//   }
-//   .project-heading {
-//     position: relative;
-//     padding-top: 50px;
-//     color: rgb(67, 122, 149);
-//   }
-//   .carousel {
-//     width: 100%;
-//     vertical-align: middle;
-//     position: relative;
-//     animation: fadeIn 1.5s 1.8s forwards;
-//     z-index: 999;
-//     transform: translateY(-30px);
-
-//     .title {
-//       position: relative;
-//       font-size: 24px;
-//       font-weight: bold;
-//       color: #6d6d6d;
-//       width: 100%;
-//       text-align: center;
-//       z-index: -1;
-//     }
-
-//     .gallery {
-//       padding: 0;
-//       margin: 0 auto;
-//       height: 100px;
-//       width: 100px;
-//       position: relative;
-//       transform-style: preserve-3d;
-//       animation: gallery 100s linear infinite;
-//     }
-//     .gallery span video {
-//       padding: 0;
-//       margin: 0 auto;
-//       &:hover {
-//         transition: all 1s;
-//         transform: scale(3);
-//         opacity: 1;
-//       }
-//     }
-//     .gallery:hover video {
-//       opacity: 0.2;
-//     }
-
-//     .gallery span p {
-//       align-items: center;
-//       color: black;
-//       border: 1px solid grey;
-//       font-size: 8px;
-//       font-weight: 500;
-
-//       width: 100%;
-//       -webkit-box-reflect: below 2px
-//         linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.137));
-//       transition: all 1s;
-//       &:hover {
-//         transition: all 1s;
-//         transform: scale(1.5);
-//         opacity: 1;
-//       }
-//     }
-
-//     .gallery:hover {
-//       animation-play-state: paused;
-//     }
-
-//     .gallery:hover svg {
-//       opacity: 0.2;
-//     }
-
-//     .gallery span {
-//       height: 100%;
-//       width: 100%;
-//       position: absolute;
-//       cursor: pointer;
-//       top: 0;
-//       left: 0;
-//       transform-style: preserve-3d;
-//       transform-origin: center;
-//       transform: rotateY(calc(var(--i) * 45deg)) translateZ(250px);
-//       transition: all 1s;
-//     }
-
-//     .gallery span svg {
-//       height: 100%;
-//       width: 100%;
-
-//       object-fit: cover;
-//       -webkit-box-reflect: below 1px
-//         linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.137));
-//       transition: all 1s;
-//       &:hover {
-//         cursor: pointer;
-//         transition: all 1s;
-//         transform: scale(1.5);
-//         opacity: 1;
-//       }
-//     }
-
-//     .gallery span a {
-//       height: 100%;
-//       width: 100%;
-//       object-fit: cover;
-
-//       &:hover {
-//         cursor: pointer;
-//         transition: all 1s;
-//         transform: scale(1);
-//         opacity: 1;
-//       }
-//     }
-
-//     @keyframes gallery {
-//       0% {
-//         transform: perspective(2000px) rotateY(0deg);
-//       }
-//       50% {
-//         transform: perspective(2000px) rotateY(-180deg);
-//       }
-//       100% {
-//         transform: perspective(2000px) rotateY(-360deg);
-//       }
-//     }
-//   }
-// }

@@ -1,14 +1,26 @@
 import './index.scss';
 import React from 'react';
-import { Heading } from '@chakra-ui/react';
+import { Container, Text, useMediaQuery } from '@chakra-ui/react';
 
 const Carousel = (props) => {
+  const [forMobile] = useMediaQuery(
+    '(min-width: 300px) and (max-width: 900px)',
+  );
   return (
     <>
-      <div className="carousel">
-        <Heading fontFamily={'Caveat, sans serif'} align="center">
+      <Container
+        className="carousel"
+        display={'grid'}
+        justifyItems={'center'}
+        padding={10}
+      >
+        <Text
+          className="carousel-title"
+          fontSize={forMobile ? '20px' : '30px'}
+          paddingBottom={forMobile ? '50px' : '200px'}
+        >
           {props.text}
-        </Heading>
+        </Text>
         <div className="gallery">
           <span style={{ '--i': 1, display: 'flex', alignItems: 'center' }}>
             {props.description}
@@ -52,7 +64,7 @@ const Carousel = (props) => {
             {props.api}
           </span>
         </div>
-      </div>
+      </Container>
     </>
   );
 };

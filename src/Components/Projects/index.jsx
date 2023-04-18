@@ -4,35 +4,46 @@ import Carousel from '../Carousel';
 import { FaGithub, FaReact, FaSass } from 'react-icons/fa';
 import { TbWorldWww } from 'react-icons/tb';
 import { SiChakraui } from 'react-icons/si';
-import { Heading, Box, useMediaQuery, Flex } from '@chakra-ui/react';
+import {
+  Heading,
+  Box,
+  useMediaQuery,
+  VStack,
+  Container,
+} from '@chakra-ui/react';
 import taqwaRec from '../../assets/videos/Taqwa Screen Rec (Final).mov';
 
 function Projects() {
   const [forMobile] = useMediaQuery(
-    '(min-width: 300px) and (max-width: 900px)',
+    '(min-width: 300px) and (max-width: 1024px)',
   );
   return (
     <>
       <Box width={'100%'} zIndex={3}>
-        <Flex
-          zIndex={999}
-          p={4}
+        <VStack
+          zIndex={1}
           flexDirection="column"
           justifyContent={'space-between'}
           maxW="900px"
           mx="auto"
-          marginBottom={5}
         >
           <Heading
             pt={forMobile ? '100px' : '50px'}
             textAlign={'center'}
             fontSize={forMobile ? '30px' : '50px'}
-            marginBottom={'30px'}
-            fontFamily={'Yeseva One, cursive'}
+            marginBottom={'40px'}
+            color={'#fdcd37'}
           >
             PROJECTS
           </Heading>
-          <Box paddingBottom={forMobile ? '1em' : '6em'}>
+        </VStack>
+        <Container
+          display={'grid'}
+          justifyItems={'center'}
+          padding={10}
+          paddingRight={'2.5em'}
+        >
+          <Box paddingBottom={forMobile ? '1em' : '10em'}>
             <Carousel
               text={'Taqwa'}
               description={
@@ -114,7 +125,10 @@ function Projects() {
               }
             />
           </Box>
-          <Box paddingBottom={'5em'}>
+          <Box
+            paddingBottom={forMobile ? '5em' : '10em'}
+            paddingTop={forMobile ? '5em' : '10em'}
+          >
             <Carousel
               text={'Project 2'}
               description={
@@ -196,7 +210,10 @@ function Projects() {
               }
             />
           </Box>
-          <Box paddingBottom={'5em'}>
+          <Box
+            paddingBottom={forMobile ? '5em' : '10em'}
+            paddingTop={forMobile ? '5em' : '10em'}
+          >
             <Carousel
               text={'Project 3'}
               description={
@@ -278,7 +295,10 @@ function Projects() {
               }
             />
           </Box>
-          <Box>
+          <Box
+            paddingTop={forMobile ? '5em' : '10em'}
+            paddingBottom={forMobile ? '5em' : '15em'}
+          >
             <Carousel
               text={'Project 4'}
               description={
@@ -360,9 +380,8 @@ function Projects() {
               }
             />
           </Box>
-        </Flex>
+        </Container>
       </Box>
-      ;
     </>
   );
 }

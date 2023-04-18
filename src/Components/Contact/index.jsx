@@ -49,7 +49,6 @@ function Contact() {
             textAlign={'center'}
             fontSize={forMobile ? '30px' : '50px'}
             marginBottom={forMobile ? '10px' : '30px'}
-            fontFamily={'Yeseva One, cursive'}
           >
             CONTACT ME!
           </Heading>
