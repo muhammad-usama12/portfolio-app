@@ -1,17 +1,31 @@
 import React from 'react';
 import './index.scss';
 import Carousel from '../Carousel';
-import { FaGithub, FaReact, FaSass } from 'react-icons/fa';
+import { FaCss3, FaGithub, FaReact, FaSass } from 'react-icons/fa';
 import { TbWorldWww } from 'react-icons/tb';
-import { SiChakraui } from 'react-icons/si';
+import {
+  SiChakraui,
+  SiFirebase,
+  SiTwilio,
+  SiStorybook,
+  SiCypress,
+} from 'react-icons/si';
+import { DiHtml5, DiNodejs } from 'react-icons/di';
 import {
   Heading,
   Box,
   useMediaQuery,
   VStack,
   Container,
+  Image,
 } from '@chakra-ui/react';
 import taqwaRec from '../../assets/videos/Taqwa Screen Rec (Final).mov';
+import teeboImg from '../../assets/images/teebo_1.png';
+import teeboImg2 from '../../assets/images/teebo_2.png';
+import foodApp from '../../assets/images/food_app.png';
+import foodApp2 from '../../assets/images/food_app2.png';
+import schedulerApp from '../../assets/images/scheduler.png';
+import schedulerApp2 from '../../assets/images/scheduler2.png';
 
 function Projects() {
   const [forMobile] = useMediaQuery(
@@ -130,43 +144,19 @@ function Projects() {
             paddingTop={forMobile ? '5em' : '10em'}
           >
             <Carousel
-              text={'Project 2'}
+              text={'Teebo'}
               description={
                 <p align={'center'}>
-                  Taqwa (تقوى) is a front-end application that provides
-                  essential Islamic tools in a centralized dashboard.{' '}
+                  Teebo is a full-stack app which provides a platform for TV
+                  show fans to connect, engage and discuss their favorites
+                  shows.{' '}
                 </p>
               }
-              media={
-                <video
-                  src={taqwaRec}
-                  style={{
-                    position: 'relative',
-                    width: '100%',
-                    height: '100%',
-                  }}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                />
-              }
-              website={
-                <a
-                  href="https://taqwa.vercel.app/"
-                  target={'_blank'}
-                  rel="noreferrer"
-                >
-                  <TbWorldWww
-                    color="
-                    #B0BA80"
-                    style={{ textDecoration: 'none' }}
-                  />
-                </a>
-              }
+              media={<Image src={teeboImg} />}
+              website={<Image src={teeboImg2} />}
               github={
                 <a
-                  href="https://github.com/muhammad-usama12/taqwa"
+                  href="https://github.com/muhammad-usama12/teebo"
                   target={'_blank'}
                   rel="noreferrer"
                 >
@@ -174,28 +164,43 @@ function Projects() {
                 </a>
               }
               stack={
-                <a href="https://react.dev/" target={'_blank'} rel="noreferrer">
-                  <FaReact color="#61DBFB" />
-                </a>
+                <>
+                  <a
+                    href="https://react.dev/"
+                    target={'_blank'}
+                    rel="noreferrer"
+                  >
+                    <FaReact color="#61DBFB" />
+                  </a>
+                  <a
+                    href="https://www.sass-lang.com"
+                    target={'_blank'}
+                    rel="noreferrer"
+                  >
+                    <FaSass color="#c69" />
+                  </a>
+                </>
               }
               stack2={
-                <a
-                  href="https://www.sass-lang.com"
-                  target={'_blank'}
-                  rel="noreferrer"
-                >
-                  <FaSass color="#c69" />
-                </a>
+                <>
+                  <a
+                    href="https://www.sass-lang.com"
+                    target={'_blank'}
+                    rel="noreferrer"
+                  >
+                    <SiFirebase color="#FFCB2B" />
+                  </a>
+                </>
               }
               api={
                 <p align={'center'}>
                   <a
                     style={{ textDecoration: 'none', color: 'black' }}
-                    href="https://aladhan.com/"
+                    href="https://developers.giphy.com/docs/api/#quick-start-guide"
                     target={'_blank'}
                     rel="noreferrer"
                   >
-                    Aladhan API
+                    Giphy API
                   </a>
                 </p>
               }
@@ -215,43 +220,18 @@ function Projects() {
             paddingTop={forMobile ? '5em' : '10em'}
           >
             <Carousel
-              text={'Project 3'}
+              text={'Food Ordering App'}
               description={
                 <p align={'center'}>
-                  Taqwa (تقوى) is a front-end application that provides
-                  essential Islamic tools in a centralized dashboard.{' '}
+                  A food ordering app that enables users to order food and
+                  reminds them when their food's ready via text notification.{' '}
                 </p>
               }
-              media={
-                <video
-                  src={taqwaRec}
-                  style={{
-                    position: 'relative',
-                    width: '100%',
-                    height: '100%',
-                  }}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                />
-              }
-              website={
-                <a
-                  href="https://taqwa.vercel.app/"
-                  target={'_blank'}
-                  rel="noreferrer"
-                >
-                  <TbWorldWww
-                    color="
-                    #B0BA80"
-                    style={{ textDecoration: 'none' }}
-                  />
-                </a>
-              }
+              media={<Image src={foodApp} />}
+              website={<Image src={foodApp2} />}
               github={
                 <a
-                  href="https://github.com/muhammad-usama12/taqwa"
+                  href="https://github.com/muhammad-usama12/food_ordering_app"
                   target={'_blank'}
                   rel="noreferrer"
                 >
@@ -259,9 +239,15 @@ function Projects() {
                 </a>
               }
               stack={
-                <a href="https://react.dev/" target={'_blank'} rel="noreferrer">
-                  <FaReact color="#61DBFB" />
-                </a>
+                <>
+                  <a
+                    href="https://react.dev/"
+                    target={'_blank'}
+                    rel="noreferrer"
+                  >
+                    <DiHtml5 color="#F16529" />
+                  </a>
+                </>
               }
               stack2={
                 <a
@@ -269,28 +255,21 @@ function Projects() {
                   target={'_blank'}
                   rel="noreferrer"
                 >
-                  <FaSass color="#c69" />
+                  <FaCss3 color="#2965f1" />
                 </a>
               }
               api={
-                <p align={'center'}>
-                  <a
-                    style={{ textDecoration: 'none', color: 'black' }}
-                    href="https://aladhan.com/"
-                    target={'_blank'}
-                    rel="noreferrer"
-                  >
-                    Aladhan API
-                  </a>
-                </p>
-              }
-              ui={
                 <a
-                  href="https://chakra-ui.com/"
+                  href="https://www.twilio.com/docs/usage/api"
                   target={'_blank'}
                   rel="noreferrer"
                 >
-                  <SiChakraui color="#6AF2F0" />
+                  <SiTwilio color="#f22f46" />
+                </a>
+              }
+              ui={
+                <a href="https://react.dev/" target={'_blank'} rel="noreferrer">
+                  <DiNodejs color="#3C873A" />
                 </a>
               }
             />
@@ -300,40 +279,15 @@ function Projects() {
             paddingBottom={forMobile ? '5em' : '15em'}
           >
             <Carousel
-              text={'Project 4'}
+              text={'Interview Scheduler'}
               description={
                 <p align={'center'}>
-                  Taqwa (تقوى) is a front-end application that provides
-                  essential Islamic tools in a centralized dashboard.{' '}
+                  Interview Scheduler is a full-stack application which allows
+                  users to book and manage appointments.{' '}
                 </p>
               }
-              media={
-                <video
-                  src={taqwaRec}
-                  style={{
-                    position: 'relative',
-                    width: '100%',
-                    height: '100%',
-                  }}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                />
-              }
-              website={
-                <a
-                  href="https://taqwa.vercel.app/"
-                  target={'_blank'}
-                  rel="noreferrer"
-                >
-                  <TbWorldWww
-                    color="
-                    #B0BA80"
-                    style={{ textDecoration: 'none' }}
-                  />
-                </a>
-              }
+              media={<Image src={schedulerApp} />}
+              website={<Image src={schedulerApp2} />}
               github={
                 <a
                   href="https://github.com/muhammad-usama12/taqwa"
@@ -354,20 +308,17 @@ function Projects() {
                   target={'_blank'}
                   rel="noreferrer"
                 >
-                  <FaSass color="#c69" />
+                  <FaCss3 color="#2965f1" />
                 </a>
               }
               api={
-                <p align={'center'}>
-                  <a
-                    style={{ textDecoration: 'none', color: 'black' }}
-                    href="https://aladhan.com/"
-                    target={'_blank'}
-                    rel="noreferrer"
-                  >
-                    Aladhan API
-                  </a>
-                </p>
+                <a
+                  href="https://chakra-ui.com/"
+                  target={'_blank'}
+                  rel="noreferrer"
+                >
+                  <SiCypress color="#444444" />
+                </a>
               }
               ui={
                 <a
@@ -375,7 +326,7 @@ function Projects() {
                   target={'_blank'}
                   rel="noreferrer"
                 >
-                  <SiChakraui color="#6AF2F0" />
+                  <SiStorybook color="#ff528c" />
                 </a>
               }
             />
