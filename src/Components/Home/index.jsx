@@ -19,7 +19,7 @@ function Home() {
   const [currentLanguageIndex, setCurrentLanguageIndex] = useState(0);
 
   const blobSpec = {
-    h: 400,
+    h: 500,
     w: 150,
   };
 

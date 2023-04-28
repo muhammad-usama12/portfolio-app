@@ -98,13 +98,6 @@ h1 {
   }
 }
 
-// .blobs {
-//   position: absolute;
-//   transform: translateX(90%) translateY(-50%);
-//   animation: fadeIn 1s 1.8s backwards;
-//   z-index: -1;
-// }
-
 canvas {
   position: absolute;
   left: -40%;
@@ -159,7 +152,7 @@ canvas {
     touch-action: auto;
     z-index: -1;
     &:nth-child(2) {
-      left: -20%;
+      left: -10%;
     }
     &:nth-child(3) {
       left: 10%;
@@ -172,9 +165,6 @@ canvas {
     }
     &:nth-child(6) {
       left: 100%;
-    }
-    &:nth-child(7) {
-      left: 130%;
     }
   }
 }

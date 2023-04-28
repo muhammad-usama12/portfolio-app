@@ -8,18 +8,16 @@
 }
 
 .blobs-about {
-  position: absolute;
-  left: 33%;
-  // top: 30%;
-
+  position: sticky;
+  left: 30%;
+  // top: 10%;
+  bottom: 110%;
   z-index: -99;
 }
 
 @media screen and (min-width: 300px) and (max-width: 900px) {
   .blobs-about {
-    position: relative;
-    top: 0%;
-    bottom: 1447px;
-    // top: -1447px;
+    position: sticky;
+    left: -20%;
   }
 }
