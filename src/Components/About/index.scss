@@ -7,6 +7,45 @@
   background: conic-gradient(from 90deg at 1px 1px, #0000 25%, #000 0);
 }
 
+.holder {
+  position: relative;
+  bottom: 30px;
+  left: 9%;
+  width: 300px;
+  height: 50px;
+}
+.clip {
+  /* Clip edges, as some of the lines don't terminate nicely. */
+  overflow: hidden;
+}
+
+.line {
+  position: absolute;
+  width: 150px;
+  /* Height set to clip correctly basically background-size/2 + line width */
+  height: 26px;
+}
+.line1 {
+  background: linear-gradient(
+    45deg,
+    transparent,
+    transparent 49%,
+    #bf8f37 49%,
+    transparent 51%
+  );
+}
+.line2 {
+  background: linear-gradient(
+    -45deg,
+    transparent,
+    transparent 49%,
+    #bf8f37 49%,
+    transparent 51%
+  );
+}
+.line {
+  background-size: 50px 50px;
+}
 .blobs-about {
   position: sticky;
   left: 30%;

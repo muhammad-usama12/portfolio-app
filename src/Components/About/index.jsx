@@ -1,7 +1,6 @@
 import React from 'react';
 import './index.scss';
 import Svg from '../Svg';
-
 import {
   Container,
   Heading,
@@ -47,6 +46,7 @@ function About() {
             alt="Muhammad Usama"
             zIndex={4}
           />
+
           <Text
             textAlign={forMobile ? 'center' : 'left'}
             p={10}
@@ -79,16 +79,34 @@ function About() {
             part of a team, I always strive to exceed expectations and deliver
             tangible business value.
           </Text>
-          <Heading
-            textShadow={'0 0 1px #fdcd40'}
-            color={'#fdcd37'}
-            pt={forMobile ? '100px' : '50px'}
-            textAlign={'center'}
-            fontSize={forMobile ? '30px' : '50px'}
-            // marginBottom={'40px'}
-          >
-            EDUCATION
-          </Heading>
+          <Container display={'contents'}>
+            <Heading
+              pt={forMobile ? '100px' : '50px'}
+              textAlign={'center'}
+              fontSize={forMobile ? '25px' : '35px'}
+              // marginBottom={'40px'}
+            >
+              EDUCATION
+            </Heading>
+            <div class="holder">
+              <div class="line line1"></div>
+              <div class="line line2"></div>
+            </div>
+          </Container>
+          <Container display={'contents'}>
+            <Heading
+              pt={forMobile ? '100px' : '50px'}
+              textAlign={'center'}
+              fontSize={forMobile ? '25px' : '35px'}
+              // marginBottom={'40px'}
+            >
+              CONTINUED LEARNING
+            </Heading>
+            <div class="holder">
+              <div class="line line1"></div>
+              <div class="line line2"></div>
+            </div>
+          </Container>
           <Svg
             svg2={
               <svg
