@@ -1,3 +1,11 @@
+.blobs-projects {
+  align-self: center;
+  position: absolute;
+  top: 0%;
+  left: 23%;
+  z-index: -99;
+}
+
 .carousel {
   width: 100%;
   top: 10%;
@@ -149,6 +157,9 @@
       }
     }
   }
+  .blobs-projects {
+    left: 0%;
+  }
 }
 @media only screen and (max-width: 1024px) {
   .carousel {
@@ -174,6 +185,9 @@
         transform: perspective(1000px) rotateY(-360deg);
       }
     }
+  }
+  .blobs-projects {
+    left: 30%;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -217,6 +231,9 @@
       }
     }
   }
+  .blobs-projects {
+    left: 25%;
+  }
 }
 @media only screen and (max-width: 425px) {
   .carousel {
@@ -244,5 +261,8 @@
         transform: perspective(450px) rotateY(-360deg);
       }
     }
+  }
+  .blobs-projects {
+    left: 0%;
   }
 }

@@ -16,20 +16,19 @@
   object-fit: cover;
   -webkit-box-reflect: below 1px
     linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.137));
-  // transition: all 1s;
 }
-// .skill-logos {
-//   height: 100%;
-//   width: 100%;
-//   position: absolute;
-//   // cursor: pointer;
-//   top: 0;
-//   left: 0;
-// }
 
 .skill-logos {
   animation: rotation3d 20s infinite linear;
   transform-style: preserve-3d;
+}
+
+.blobs-skills {
+  align-self: center;
+  position: absolute;
+  top: 0%;
+  left: 23%;
+  z-index: -99;
 }
 
 @keyframes rotation3d {
@@ -38,5 +37,11 @@
   }
   to {
     transform: rotateY(360deg) translateZ(0px);
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 1024px) {
+  .blobs-skills {
+    top: 1%;
   }
 }

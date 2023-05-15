@@ -69,11 +69,15 @@ h1 {
   padding-top: 1em;
   padding-bottom: 1em;
   font-size: 25px;
-  color: rgb(40, 29, 29);
+  color: rgb(0, 0, 0);
   font-weight: 400;
+  .typewriter-start {
+    color: #7d718b;
+  }
   .typewriter {
-    background-color: #ffd900;
-    font-weight: 400;
+    background-color: #ece8d6;
+    color: #7d718b;
+    font-weight: 600;
     font-style: oblique;
   }
 }
@@ -102,7 +106,7 @@ canvas {
   position: absolute;
   left: -40%;
   top: 50%;
-  animation: fadeIn 1s forwards;
+  animation: fadeIn 2s forwards;
   transform: translateY(-50%);
   touch-action: auto;
   z-index: -1;
@@ -121,12 +125,9 @@ canvas {
   &:nth-child(6) {
     left: 100%;
   }
-  &:nth-child(7) {
-    left: 130%;
-  }
 }
 
-@media screen and (min-width: 300px) and (max-width: 900px) {
+@media screen and (min-width: 300px) and (max-width: 1024px) {
   h1 {
     font-size: 35px;
     width: 100;
@@ -147,10 +148,6 @@ canvas {
     position: absolute;
     left: -40%;
     top: 50%;
-    animation: fadeIn 1s forwards;
-    transform: translateY(-50%);
-    touch-action: auto;
-    z-index: -1;
     &:nth-child(2) {
       left: -10%;
     }
