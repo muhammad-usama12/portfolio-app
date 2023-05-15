@@ -49,46 +49,82 @@ function Contact() {
             textAlign={'center'}
             fontSize={forMobile ? '30px' : '50px'}
             marginBottom={forMobile ? '10px' : '30px'}
+            textColor={'#9c6167'}
           >
             CONTACT ME!
           </Heading>
-          <Svg
-            className={'blobs-contact'}
-            svg1={
-              <svg
-                id="visual"
-                viewBox="0 0 900 600"
-                width="900"
-                height="600"
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.1"
-              >
-                <g transform="translate(461.50408247489185 278.7692931145358)">
-                  <path
-                    id="blob5"
-                    d="M148.2 -93.8C196.3 -57.9 242.4 4 235.6 61.8C228.8 119.6 169.1 173.3 105.7 194.2C42.2 215 -24.9 203 -91.8 176.3C-158.8 149.6 -225.6 108.2 -249.3 45.3C-272.9 -17.6 -253.3 -102 -204.6 -138.2C-155.8 -174.3 -77.9 -162.1 -13.9 -151C50 -139.9 100.1 -129.8 148.2 -93.8"
-                    fill="#524b42"
-                  ></path>
-                </g>
-                <g transform="translate(473.7794098292923 284.81386846306543)">
-                  <path
-                    id="blob6"
-                    d="M153.8 -104.8C195.6 -70.3 223.1 -6.6 208 42.7C192.9 91.9 135.3 126.6 75.6 154.3C15.9 182 -45.8 202.7 -107.5 187C-169.2 171.2 -230.9 119 -251.6 50.9C-272.4 -17.2 -252.3 -101.2 -203.5 -137.3C-154.8 -173.5 -77.4 -161.7 -10.7 -153.2C56 -144.7 112.1 -139.4 153.8 -104.8"
-                    fill="#524b42"
-                    visibility={'hidden'}
-                  ></path>
-                </g>
-              </svg>
-            }
-          />
-          <Text fontWeight={'semibold'}>
-            Let's brew up some ideas over a cup of coffee.
+          {forMobile ? (
+            <Svg
+              svg1={
+                <svg
+                  id="visual"
+                  viewBox="175 50 650 900"
+                  width="375"
+                  height="600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.1"
+                >
+                  <g transform="translate(482.20104820007896 268.46618056079257)">
+                    <path
+                      id="blob5"
+                      d="M145.9 -160.4C188.6 -103.2 222.3 -51.6 244.2 21.9C266.1 95.5 276.3 190.9 233.6 238.3C190.9 285.6 95.5 284.8 6.7 278.1C-82 271.4 -164 258.7 -213 211.4C-262 164 -278 82 -260.9 17.1C-243.7 -47.7 -193.5 -95.5 -144.5 -152.6C-95.5 -209.8 -47.7 -276.4 1.9 -278.3C51.6 -280.3 103.2 -217.6 145.9 -160.4"
+                      fill="#f5ecec"
+                    ></path>
+                  </g>{' '}
+                  <g transform="translate(431.04357176764483 251.8591471748567)">
+                    <path
+                      id="blob6"
+                      d="M119.1 -100C163.3 -75 214.1 -37.5 230.8 16.6C247.4 70.7 229.8 141.4 185.6 184.9C141.4 228.4 70.7 244.7 4.7 240C-61.3 235.3 -122.6 209.6 -158.2 166.1C-193.9 122.6 -203.9 61.3 -197 7C-190 -47.4 -166.1 -94.8 -130.4 -119.8C-94.8 -144.8 -47.4 -147.4 -4.9 -142.4C37.5 -137.5 75 -125 119.1 -100"
+                      fill="#f5ecec"
+                      visibility={'hidden'}
+                    ></path>
+                  </g>
+                </svg>
+              }
+            />
+          ) : (
+            <Svg
+              svg1={
+                <svg
+                  id="visual"
+                  viewBox="0 0 960 540"
+                  width="960"
+                  height="540"
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.1"
+                >
+                  <g transform="translate(482.20104820007896 268.46618056079257)">
+                    <path
+                      id="blob5"
+                      d="M145.9 -160.4C188.6 -103.2 222.3 -51.6 244.2 21.9C266.1 95.5 276.3 190.9 233.6 238.3C190.9 285.6 95.5 284.8 6.7 278.1C-82 271.4 -164 258.7 -213 211.4C-262 164 -278 82 -260.9 17.1C-243.7 -47.7 -193.5 -95.5 -144.5 -152.6C-95.5 -209.8 -47.7 -276.4 1.9 -278.3C51.6 -280.3 103.2 -217.6 145.9 -160.4"
+                      fill="#f5ecec"
+                    ></path>
+                  </g>{' '}
+                  <g transform="translate(431.04357176764483 251.8591471748567)">
+                    <path
+                      id="blob6"
+                      d="M119.1 -100C163.3 -75 214.1 -37.5 230.8 16.6C247.4 70.7 229.8 141.4 185.6 184.9C141.4 228.4 70.7 244.7 4.7 240C-61.3 235.3 -122.6 209.6 -158.2 166.1C-193.9 122.6 -203.9 61.3 -197 7C-190 -47.4 -166.1 -94.8 -130.4 -119.8C-94.8 -144.8 -47.4 -147.4 -4.9 -142.4C37.5 -137.5 75 -125 119.1 -100"
+                      fill="#f5ecec"
+                      visibility={'hidden'}
+                    ></path>
+                  </g>
+                </svg>
+              }
+            />
+          )}
+          <Text
+            fontWeight={'hairline'}
+            textAlign={'center'}
+            // letterSpacing={'1px'}
+            fontSize={forMobile ? '14px' : '18px'}
+          >
+            Let's brew up some ideas over a cup of coffee ☕️
           </Text>
         </VStack>
         <Container className="text">
           <FormControl className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
-              <ul>
+              <ul className="form">
                 <li className="half">
                   <input
                     type="text"
