@@ -21,17 +21,16 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(
-      process.env.REACT_APP_SERVICE,
-      process.env.REACT_APP_TEMPLATE_ID,
-      form.current,
-      process.env.REACT_APP_PUBLIC_KEY,
-    );
-    // .then(
-    //   () => {
-    //     // alert('Email Sent Successfully!');
-    //     window.location.reload();
-    //   },
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE,
+        process.env.REACT_APP_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_PUBLIC_KEY,
+      )
+      .then(() => {
+        window.location.reload();
+      });
     //   () => {
     //     alert('Email failed!');
     //     window.location.reload(true);
@@ -152,12 +151,7 @@ function Contact() {
                   ></textarea>
                 </li>
                 <li>
-                  <button
-                    className="submit-btn"
-                    type="submit"
-                    value="Send"
-                    onSubmit={() => window.location.reload()}
-                  >
+                  <button className="submit-btn" type="submit" value="Send">
                     Send
                   </button>
                 </li>
