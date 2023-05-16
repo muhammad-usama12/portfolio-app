@@ -125,7 +125,6 @@ function Contact() {
               name="contact"
               netlify
               netlify-honeypot="bot-field"
-              hidden
               ref={form}
               onSubmit={sendEmail}
             >
