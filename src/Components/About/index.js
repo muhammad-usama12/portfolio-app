@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.scss';
-import Svg from '../Svg';
+import Svg from '../svg';
 import {
   Container,
   Heading,
