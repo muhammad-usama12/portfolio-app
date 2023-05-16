@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.scss';
-import Svg from '../svg';
+import Svg from '../Svg';
 import Carousel from '../Carousel';
 import { FaCss3, FaGithub, FaReact, FaSass } from 'react-icons/fa';
 import { TbWorldWww } from 'react-icons/tb';

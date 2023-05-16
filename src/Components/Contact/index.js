@@ -10,7 +10,7 @@ import {
   Text,
   FormControl,
 } from '@chakra-ui/react';
-import Svg from '../svg';
+import Svg from '../Svg';
 
 function Contact() {
   const [forMobile] = useMediaQuery(
