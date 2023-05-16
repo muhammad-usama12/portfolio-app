@@ -21,23 +21,22 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE,
-        process.env.REACT_APP_TEMPLATE_ID,
-        form.current,
-        process.env.REACT_APP_PUBLIC_KEY,
-      )
-      .then(
-        () => {
-          // alert('Email Sent Successfully!');
-          window.location.reload(true);
-        },
-        () => {
-          alert('Email failed!');
-          window.location.reload(true);
-        },
-      );
+    emailjs.sendForm(
+      process.env.REACT_APP_SERVICE,
+      process.env.REACT_APP_TEMPLATE_ID,
+      form.current,
+      process.env.REACT_APP_PUBLIC_KEY,
+    );
+    // .then(
+    //   () => {
+    //     // alert('Email Sent Successfully!');
+    //     window.location.reload();
+    //   },
+    //   () => {
+    //     alert('Email failed!');
+    //     window.location.reload(true);
+    //   },
+    // );
   };
 
   return (
@@ -153,7 +152,12 @@ function Contact() {
                   ></textarea>
                 </li>
                 <li>
-                  <button className="submit-btn" type="submit" value="Send">
+                  <button
+                    className="submit-btn"
+                    type="submit"
+                    value="Send"
+                    onSubmit={window.location.reload()}
+                  >
                     Send
                   </button>
                 </li>
