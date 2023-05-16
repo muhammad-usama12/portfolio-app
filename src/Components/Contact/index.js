@@ -156,7 +156,7 @@ function Contact() {
                     className="submit-btn"
                     type="submit"
                     value="Send"
-                    onSubmit={window.location.reload()}
+                    onSubmit={() => window.location.reload()}
                   >
                     Send
                   </button>
