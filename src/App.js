@@ -1,6 +1,6 @@
 import './App.scss';
-import AppRoutes from './components/Routes/index.jsx';
-import Header from './components/Header/index.jsx';
+import AppRoutes from './components/Routes/index';
+import Header from './components/Header/index';
 import { useLocation } from 'react-router-dom';
 import { motion, useScroll } from 'framer-motion';
 
