@@ -121,7 +121,14 @@ function Contact() {
         </VStack>
         <Container className="text">
           <FormControl className="contact-form">
-            <form ref={form} onSubmit={sendEmail}>
+            <form
+              name="contact"
+              netlify
+              netlify-honeypot="bot-field"
+              hidden
+              ref={form}
+              onSubmit={sendEmail}
+            >
               <ul className="form">
                 <li className="half">
                   <input
