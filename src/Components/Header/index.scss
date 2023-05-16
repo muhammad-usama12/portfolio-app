@@ -1,5 +1,5 @@
 .sidebar {
-  background: #444444;
+  background: #efeff2;
   width: 60px;
   height: 100%;
   position: fixed;
@@ -13,7 +13,7 @@
     img {
       display: block;
       margin: 5px auto;
-      width: 45px;
+      width: 50px;
       height: auto;
     }
   }
@@ -31,17 +31,17 @@ nav {
   a {
     display: block;
     font-size: 22px;
-    color: #6d6d6d;
     line-height: 51px;
     position: relative;
     text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
 
     i {
       transition: all 0.3s ease-out;
     }
 
     &:hover {
-      color: #433407;
+      color: #c1cdbc;
 
       svg {
         opacity: 0;
@@ -66,7 +66,7 @@ nav {
     &:first-child {
       &:after {
         content: 'HOME';
-        color: #fdcd37;
+        color: #6a686d;
 
         font-weight: 500;
       }
@@ -74,35 +74,35 @@ nav {
     &:nth-child(2) {
       &:after {
         content: 'ABOUT';
-        color: #fdcd37;
+        color: #6a686d;
         font-weight: 500;
       }
     }
     &:nth-child(3) {
       &:after {
         content: 'SKILLS';
-        color: #fdcd37;
+        color: #6a686d;
         font-weight: 500;
       }
     }
     &:nth-child(4) {
       &:after {
         content: 'PROJECTS';
-        color: #fdcd37;
+        color: #6a686d;
         font-weight: 500;
       }
     }
     &:nth-child(5) {
       &:after {
         content: 'CONTACT';
-        color: #fdcd37;
+        color: #6a686d;
         font-weight: 500;
       }
     }
   }
   a.active {
     svg {
-      color: #fdcd37;
+      color: #7c6c82;
     }
   }
 }
@@ -124,7 +124,7 @@ ul {
       font-size: 18px;
     }
     &:hover svg {
-      color: #fdcd37;
+      color: #b8a0c1;
     }
   }
 }
@@ -134,7 +134,7 @@ ul {
 
 // Media Queries
 
-@media only screen and (min-width: 300px) and (max-width: 1039px) {
+@media only screen and (min-width: 300px) and (max-width: 900px) {
   .sidebar {
     position: absolute;
     width: 100%;
@@ -142,8 +142,8 @@ ul {
     z-index: 5;
     .logo {
       position: absolute;
-      top: -15px;
-      left: 15px;
+      top: -10px;
+      left: 22px;
       img {
         display: block;
         margin: 2px auto;
@@ -162,11 +162,10 @@ ul {
       &.mobile-show {
         display: flex;
         justify-content: space-around;
-        color: #8a8aa8;
         opacity: 1;
         position: absolute;
         top: 53px;
-        background-color: #444444;
+        background-color: #efeff2;
         transform: translateX(0%);
         transition: transform 0.75s ease-in;
       }
@@ -174,11 +173,11 @@ ul {
       &.mobile-hide {
         display: flex;
         justify-content: space-around;
-        color: #8a8aa8;
+        // color: #8a8aa8;
         opacity: 1;
         position: absolute;
         top: 53px;
-        background-color: #444444;
+        background-color: #efeff2;
         transform: translateX(100%);
         transition: transform 0.75s ease-out;
       }
@@ -234,7 +233,7 @@ ul {
           &:after {
             font-size: 14px;
             font-weight: 400;
-            padding: 40px 40px 0 0;
+            padding: 40px 45px 0 0;
             content: 'PROJECTS';
           }
         }
@@ -242,7 +241,7 @@ ul {
           &:after {
             font-size: 14px;
             font-weight: 400;
-            padding: 40px 40px 0 0;
+            padding: 40px 60px 0 0;
             content: 'CONTACT';
           }
         }
@@ -254,8 +253,8 @@ ul {
 
     .stack {
       position: absolute;
-      top: 18px;
-      right: 15px;
+      top: 16px;
+      right: 20px;
       display: flex;
       list-style: none;
       font-size: 25px;

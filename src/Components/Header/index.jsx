@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './index.scss';
-import LogoU from '../../assets/images/logo-u3.png';
+import LogoU from '../../assets/images/logo-u1.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHouse,
@@ -28,26 +28,51 @@ function Header() {
       </Link>
 
       <nav className={`mobile${showNav ? '-show' : '-hide'}`}>
-        <NavLink exact="true" activeclassname="active" to="/">
-          <FontAwesomeIcon icon={faHouse} color="#6d6d6d" className="home" />
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          to="/"
+          onClick={() => setShowNav(false)}
+        >
+          <FontAwesomeIcon icon={faHouse} color="#bebcc4" className="home" />
         </NavLink>
-        <NavLink exact="true" activeclassname="active" to="/about">
-          <FontAwesomeIcon icon={faUser} color="#6d6d6d" className="about" />
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          to="/about"
+          onClick={() => setShowNav(false)}
+        >
+          <FontAwesomeIcon icon={faUser} color="#bebcc4" className="about" />
         </NavLink>
-        <NavLink exact="true" activeclassname="active" to="/skills">
-          <FontAwesomeIcon icon={faGears} color="#6d6d6d" className="skills" />
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          to="/skills"
+          onClick={() => setShowNav(false)}
+        >
+          <FontAwesomeIcon icon={faGears} color="#bebcc4" className="skills" />
         </NavLink>
-        <NavLink exact="true" activeclassname="active" to="/projects">
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          to="/projects"
+          onClick={() => setShowNav(false)}
+        >
           <FontAwesomeIcon
             icon={faLaptopCode}
-            color="#6d6d6d"
+            color="#bebcc4"
             className="projects"
           />
         </NavLink>
-        <NavLink exact="true" activeclassname="active" to="/contact">
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          to="/contact"
+          onClick={() => setShowNav(false)}
+        >
           <FontAwesomeIcon
             icon={faEnvelope}
-            color="#6d6d6d"
+            color="#bebcc4"
             className="contact"
           />
         </NavLink>
@@ -61,7 +86,7 @@ function Header() {
               rel="noreferrer"
               href="https://www.linkedin.com/in/muhammadusama12/"
             >
-              <FontAwesomeIcon icon={faLinkedinIn} color="#6d6d6d" />
+              <FontAwesomeIcon icon={faLinkedinIn} color="#bebcc4" />
             </a>
           </li>
           <li>
@@ -74,16 +99,13 @@ function Header() {
               <FontAwesomeIcon
                 className="github"
                 icon={faGithub}
-                color="#6d6d6d"
+                color="#bebcc4"
               />
             </a>
           </li>
           <li>
-            <a
-              href="../../assets/images/Muhammad Usama(Resume).pdf"
-              download="Muhammad Usama(Resume).pdf"
-            >
-              <FontAwesomeIcon icon={faFile} color="#6d6d6d" />
+            <a href="/resume/Muhammad Usama(Resume).pdf" download>
+              <FontAwesomeIcon icon={faFile} color="#bebcc4" />
             </a>
           </li>
         </div>
@@ -91,8 +113,7 @@ function Header() {
       <FontAwesomeIcon
         onClick={toggleNav}
         icon={faBars}
-        color="#ffd700"
-        size="3x"
+        color="#b8a0c1"
         className="stack"
       />
     </div>

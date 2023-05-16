@@ -2,7 +2,7 @@
   align-self: center;
   position: absolute;
   top: 0%;
-  left: 23%;
+  // left: 23%;
   z-index: -99;
 }
 
@@ -55,9 +55,9 @@
   }
   .gallery span p {
     align-items: center;
-    color: black;
+    color: #76a6b4;
     line-height: 150%;
-    border: 1px solid grey;
+    border: 2px double #7d959d;
     font-size: 14px;
 
     width: 100%;
@@ -157,9 +157,6 @@
       }
     }
   }
-  .blobs-projects {
-    left: 0%;
-  }
 }
 @media only screen and (max-width: 1024px) {
   .carousel {
@@ -186,9 +183,6 @@
       }
     }
   }
-  .blobs-projects {
-    left: 30%;
-  }
 }
 @media only screen and (max-width: 768px) {
   .carousel {
@@ -201,8 +195,6 @@
 
     .gallery span p {
       line-height: 100%;
-      border: 1px solid grey;
-      font-size: 14px;
 
       width: 100%;
       -webkit-box-reflect: below 2px
@@ -231,9 +223,6 @@
       }
     }
   }
-  .blobs-projects {
-    left: 25%;
-  }
 }
 @media only screen and (max-width: 425px) {
   .carousel {
@@ -261,8 +250,5 @@
         transform: perspective(450px) rotateY(-360deg);
       }
     }
-  }
-  .blobs-projects {
-    left: 0%;
   }
 }

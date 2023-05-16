@@ -17,7 +17,12 @@ const Carousel = (props) => {
         <Text
           className="carousel-title"
           fontSize={forMobile ? '20px' : '30px'}
-          paddingBottom={forMobile ? '50px' : '200px'}
+          paddingTop={forMobile ? '40px' : '10px'}
+          paddingBottom={forMobile ? '60px' : '200px'}
+          textColor={'#8a8f9b'}
+          fontFamily={'Quicksand, sans-serif'}
+          textTransform={'uppercase'}
+          letterSpacing={'3px'}
         >
           {props.text}
         </Text>

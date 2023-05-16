@@ -74,6 +74,7 @@
     padding: 0 20px;
     box-sizing: border-box;
     outline: none;
+    font-family: Quicksand, sans-serif;
   }
 
   input::placeholder {
@@ -95,9 +96,11 @@
     min-height: 150px;
     box-sizing: border-box;
     outline: none;
+    font-family: Quicksand, sans-serif;
   }
   textarea::placeholder {
     color: #ffffff;
+
     &:focus::placeholder {
       color: transparent;
     }
@@ -114,6 +117,7 @@
     border-radius: 4px;
     white-space: nowrap;
     float: right;
+    font-family: Quicksand, sans-serif;
     &:hover {
       background-color: #efeff2;
       color: black;
@@ -177,7 +181,6 @@
 .blobs-contact {
   align-self: center;
   position: absolute;
-  // left: 30%;
   top: 2%;
   z-index: -99;
 }
@@ -223,12 +226,6 @@
     top: auto;
     right: 5%;
     bottom: 50px;
-  }
-  .blobs-contact {
-    position: absolute;
-    top: -15%;
-    left: 7%;
-    z-index: -1;
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 550px) {

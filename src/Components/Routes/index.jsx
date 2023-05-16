@@ -1,10 +1,11 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import Contact from '../Contact/index'
-import Projects from '../Projects/index'
-import About from '../About/index'
-import Home from '../Home/index'
-import Skills from '../Skills'
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+
+import Contact from '../Contact/index';
+import Projects from '../Projects/index';
+import About from '../About/index';
+import Home from '../Home/index';
+import Skills from '../Skills';
 
 function AppRoutes() {
   return (
@@ -17,7 +18,7 @@ function AppRoutes() {
         <Route exact path="/skills" element={<Skills />}></Route>
       </Routes>
     </>
-  )
+  );
 }
 
-export default AppRoutes
+export default AppRoutes;

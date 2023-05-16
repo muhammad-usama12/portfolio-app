@@ -149,16 +149,21 @@ function Home() {
       </h1>
 
       <div className="type-animation">
-        <span>I'm a </span>
+        <span className="typewriter-start">I'm </span>
         <TypeAnimation
           className="typewriter"
           speed={{ type: 'keyStrokeDelayInMs', value: 100 }}
-          deletionSpeed={{ type: 'keyStrokeDelayInMs', value: 100 }}
+          deletionSpeed={65}
           sequence={[
-            'problem solver',
-            'quick learner',
-            'collaborative team player',
-            'result oriented',
+            'a problem solver',
+            750,
+            'an innovative thinker',
+            750,
+            'analytical',
+            750,
+            'a team player',
+            750,
+            'a full-stack developer',
           ]}
         />
       </div>
