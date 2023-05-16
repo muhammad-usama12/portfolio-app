@@ -5,7 +5,7 @@ import Contact from './Contact/index';
 import Projects from './Projects/index';
 import About from './About/index';
 import Home from './Home/index';
-import Skills from './Skills';
+import Skills from './Skills/index';
 
 function AppRoutes() {
   return (
