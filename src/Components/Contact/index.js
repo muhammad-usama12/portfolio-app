@@ -31,7 +31,7 @@ function Contact() {
       .then(
         () => {
           // alert('Email Sent Successfully!');
-          window.location.reload(false);
+          window.location.reload(true);
         },
         () => {
           alert('Email failed!');
