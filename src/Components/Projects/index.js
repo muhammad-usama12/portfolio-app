@@ -136,6 +136,7 @@ function Projects() {
                 media={
                   <video
                     src={taqwaRec}
+                    typeof="video/mp4"
                     style={{
                       position: 'relative',
                       width: '100%',
@@ -154,8 +155,7 @@ function Projects() {
                     rel="noreferrer"
                   >
                     <TbWorldWww
-                      color="
-                    #B0BA80"
+                      color={'#76a6b4'}
                       style={{ textDecoration: 'none' }}
                     />
                   </a>
@@ -190,7 +190,7 @@ function Projects() {
                 api={
                   <p align={'center'}>
                     <a
-                      style={{ textDecoration: 'none', color: '##76a6b4' }}
+                      style={{ textDecoration: 'none', color: '#76a6b4' }}
                       href="https://aladhan.com/"
                       target={'_blank'}
                       rel="noreferrer"

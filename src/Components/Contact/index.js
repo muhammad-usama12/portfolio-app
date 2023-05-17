@@ -121,7 +121,7 @@ function Contact() {
         </VStack>
         <Container className="text">
           <FormControl className="contact-form">
-            <form name="contact" ref={form} onSubmit={sendEmail}>
+            <form ref={form} onSubmit={sendEmail}>
               <ul className="form">
                 <li className="half">
                   <input
