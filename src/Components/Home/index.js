@@ -7,7 +7,7 @@ import { Blob } from 'react-interactive-blob';
 const languages = [
   "Hello, I'm",
   "Bonjour, je m'appelle",
-  'Hola soy,',
+  'Hola, soy',
   '你好，我叫',
   'こんにちは、私の名前は',
   'سلام، میں ہوں',
@@ -38,7 +38,7 @@ function Home() {
   useEffect(() => {
     const intervalId = setTimeout(() => {
       setCurrentLanguageIndex((currentLanguageIndex + 1) % languages.length);
-    }, 10000);
+    }, 5000);
 
     return () => clearTimeout(intervalId);
   }, [currentLanguageIndex]);

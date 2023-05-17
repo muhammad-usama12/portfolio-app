@@ -27,7 +27,7 @@ h1 {
     background-color: #d4c6d9;
     opacity: 1;
     letter-spacing: 5px;
-    animation: fade-in-out 10s ease-in-out infinite;
+    animation: fade-in-out 5s linear infinite;
     transform-style: preserve-3d;
     transition: transform 1s;
 
@@ -35,16 +35,16 @@ h1 {
       0% {
         opacity: 0;
       }
-      25% {
+      20% {
         opacity: 0.85;
       }
-      50% {
+      40% {
         opacity: 0.85;
       }
-      65% {
+      55% {
         opacity: 1;
       }
-      85% {
+      75% {
         opacity: 0.85;
       }
       100% {

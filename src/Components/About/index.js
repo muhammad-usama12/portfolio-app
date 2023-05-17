@@ -9,7 +9,8 @@ import {
   Image,
   useMediaQuery,
 } from '@chakra-ui/react';
-import Pic from '../../assets/images/12153DF3-C8B8-4404-93CE-2C58BD3D450C_1_105_c.jpeg';
+
+import Pic from '../../assets/images/E6E8BA23-E854-4FFA-8869-EE526E1A4D77_1_105_c.jpeg';
 
 function About() {
   const [forMobile] = useMediaQuery(
@@ -103,7 +104,7 @@ function About() {
           className="about-body"
           textAlign="center"
           p={15}
-          width={'85%'}
+          width={forMobile ? '85%' : '50%'}
           fontSize={forMobile ? '14px' : '20px'}
           mb={5}
         >
@@ -207,6 +208,7 @@ function About() {
             </Box>
             <Box className="education-box">
               <Text
+                as={'div'}
                 display={'flex'}
                 alignItems={'center'}
                 fontStyle={'oblique'}
@@ -215,16 +217,16 @@ function About() {
                 Diploma in Web Development (Full-Stack){' '}
                 <Text className="status-indicator green" />
               </Text>
-              <Text>
-                <hr />
-                <Text textColor={'#a59595'}>
-                  Lighthouse Labs <br /> <br /> Toronto, CA
-                </Text>
+              <hr />
+              <Text textColor={'#a59595'}>
+                Lighthouse Labs <br /> <br /> Toronto, CA
               </Text>
             </Box>
+
             <Box className="education-box">
               <Text
                 display={'flex'}
+                as={'div'}
                 alignItems={'center'}
                 fontStyle={'oblique'}
                 textColor={'#a59595'}
@@ -232,11 +234,9 @@ function About() {
                 Bachelor of Business Administration <br /> (Spec. in Accounting)
                 <Text className="status-indicator green" />
               </Text>
-              <Text>
-                <hr />
-                <Text textColor={'#a59595'}>
-                  Trent University <br /> <br /> Peterborough, CA
-                </Text>
+              <hr />
+              <Text textColor={'#a59595'}>
+                Trent University <br /> <br /> Peterborough, CA
               </Text>
             </Box>
           </>
