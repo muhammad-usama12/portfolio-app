@@ -20,7 +20,7 @@ import {
   Container,
   Image,
 } from '@chakra-ui/react';
-import taqwaRec from '../../assets/videos/Taqwa Screen Rec (Final).mov';
+import taqwaRec from '../../assets/videos/Taqwa Screen Rec (Final).mp4';
 import teeboImg from '../../assets/images/teebo_1.png';
 import teeboImg2 from '../../assets/images/teebo_2.png';
 import foodApp from '../../assets/images/food_app.png';
