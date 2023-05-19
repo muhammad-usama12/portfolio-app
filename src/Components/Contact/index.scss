@@ -234,6 +234,9 @@
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 550px) {
+  .form {
+    position: absolute;
+  }
   .container {
     width: 100%;
     height: auto;
