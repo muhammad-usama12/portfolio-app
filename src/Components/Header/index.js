@@ -104,7 +104,7 @@ function Header() {
             </a>
           </li>
           <li>
-            <a href="/resume/Muhammad Usama(Resume).pdf" download>
+            <a href="/resume/Muhammad Usama Resume.pdf" download>
               <FontAwesomeIcon icon={faFile} color="#bebcc4" />
             </a>
           </li>
