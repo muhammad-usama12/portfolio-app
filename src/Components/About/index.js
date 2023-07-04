@@ -325,6 +325,29 @@ function About() {
               </Text>
             </Text>
           </Box>
+          <Box className="development-box">
+            <a
+              href="https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Text
+                display={'flex'}
+                alignItems={'center'}
+                fontStyle={'oblique'}
+                textColor={'#a59595'}
+              >
+                JavaScript Algorithms and Data Structures Masterclass
+                <Text className="status-indicator amber" />
+              </Text>
+            </a>
+            <Text>
+              <hr />
+              <Text textColor={'#a59595'}>
+                Instructor: Colt Steele <br /> <br /> Udemy
+              </Text>
+            </Text>
+          </Box>
         </Container>
       </Container>
     </>
