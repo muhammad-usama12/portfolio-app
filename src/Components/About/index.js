@@ -25,7 +25,7 @@ function About() {
           textAlign={'center'}
           fontSize={forMobile ? '30px' : '50px'}
           marginBottom={'40px'}
-          color={'#ffdb76'}
+          color={'#66572f'}
         >
           ABOUT ME
         </Heading>
@@ -44,14 +44,14 @@ function About() {
                   <path
                     id="blob5"
                     d="M145.9 -160.4C188.6 -103.2 222.3 -51.6 244.2 21.9C266.1 95.5 276.3 190.9 233.6 238.3C190.9 285.6 95.5 284.8 6.7 278.1C-82 271.4 -164 258.7 -213 211.4C-262 164 -278 82 -260.9 17.1C-243.7 -47.7 -193.5 -95.5 -144.5 -152.6C-95.5 -209.8 -47.7 -276.4 1.9 -278.3C51.6 -280.3 103.2 -217.6 145.9 -160.4"
-                    fill="#fff7e3"
+                    fill="#e0ddd5"
                   ></path>
                 </g>{' '}
                 <g transform="translate(431.04357176764483 251.8591471748567)">
                   <path
                     id="blob6"
                     d="M119.1 -100C163.3 -75 214.1 -37.5 230.8 16.6C247.4 70.7 229.8 141.4 185.6 184.9C141.4 228.4 70.7 244.7 4.7 240C-61.3 235.3 -122.6 209.6 -158.2 166.1C-193.9 122.6 -203.9 61.3 -197 7C-190 -47.4 -166.1 -94.8 -130.4 -119.8C-94.8 -144.8 -47.4 -147.4 -4.9 -142.4C37.5 -137.5 75 -125 119.1 -100"
-                    fill="#fff7e3"
+                    fill="#e0ddd5"
                     visibility={'hidden'}
                   ></path>
                 </g>
@@ -73,14 +73,14 @@ function About() {
                   <path
                     id="blob5"
                     d="M145.9 -160.4C188.6 -103.2 222.3 -51.6 244.2 21.9C266.1 95.5 276.3 190.9 233.6 238.3C190.9 285.6 95.5 284.8 6.7 278.1C-82 271.4 -164 258.7 -213 211.4C-262 164 -278 82 -260.9 17.1C-243.7 -47.7 -193.5 -95.5 -144.5 -152.6C-95.5 -209.8 -47.7 -276.4 1.9 -278.3C51.6 -280.3 103.2 -217.6 145.9 -160.4"
-                    fill="#fff7e3"
+                    fill="#e0ddd5"
                   ></path>
                 </g>{' '}
                 <g transform="translate(431.04357176764483 251.8591471748567)">
                   <path
                     id="blob6"
                     d="M119.1 -100C163.3 -75 214.1 -37.5 230.8 16.6C247.4 70.7 229.8 141.4 185.6 184.9C141.4 228.4 70.7 244.7 4.7 240C-61.3 235.3 -122.6 209.6 -158.2 166.1C-193.9 122.6 -203.9 61.3 -197 7C-190 -47.4 -166.1 -94.8 -130.4 -119.8C-94.8 -144.8 -47.4 -147.4 -4.9 -142.4C37.5 -137.5 75 -125 119.1 -100"
-                    fill="#fff7e3"
+                    fill="#e0ddd5"
                     visibility={'hidden'}
                   ></path>
                 </g>
@@ -173,8 +173,7 @@ function About() {
             pt={forMobile ? '0px' : '10px'}
             textAlign={'center'}
             fontSize={forMobile ? '25px' : '35px'}
-            // marginBottom={'40px'}
-            textColor={'#ffdb76'}
+            textColor={'#696046'}
           >
             EDUCATION
           </Heading>
@@ -212,13 +211,12 @@ function About() {
                 display={'flex'}
                 alignItems={'center'}
                 fontStyle={'oblique'}
-                textColor={'#a59595'}
               >
                 Diploma in Web Development (Full-Stack){' '}
                 <Text className="status-indicator green" />
               </Text>
               <hr />
-              <Text textColor={'#a59595'}>
+              <Text>
                 Lighthouse Labs <br /> <br /> Toronto, CA
               </Text>
             </Box>
@@ -229,13 +227,12 @@ function About() {
                 as={'div'}
                 alignItems={'center'}
                 fontStyle={'oblique'}
-                textColor={'#a59595'}
               >
                 Bachelor of Business Administration <br /> (Spec. in Accounting)
                 <Text className="status-indicator green" />
               </Text>
               <hr />
-              <Text textColor={'#a59595'}>
+              <Text>
                 Trent University <br /> <br /> Peterborough, CA
               </Text>
             </Box>
@@ -247,7 +244,7 @@ function About() {
             textAlign={'center'}
             fontSize={forMobile ? '25px' : '35px'}
             marginBottom={'40px'}
-            textColor={'#ffdb76'}
+            textColor={'#696046'}
           >
             PROFESSIONAL DEVELOPMENT
           </Heading>
@@ -262,7 +259,6 @@ function About() {
                 display={'flex'}
                 alignItems={'center'}
                 fontStyle={'oblique'}
-                textColor={'#a59595'}
               >
                 The Complete JavaScript Course: <br /> From Zero to Expert!{' '}
                 <Text className="status-indicator amber" />
@@ -286,7 +282,6 @@ function About() {
                 display={'flex'}
                 alignItems={'center'}
                 fontStyle={'oblique'}
-                textColor={'#a59595'}
               >
                 Ultimate AWS Cloud Practitioner Course
                 <Text className="status-indicator amber" />
@@ -294,7 +289,7 @@ function About() {
             </a>
             <Text>
               <hr />
-              <Text textColor={'#a59595'}>
+              <Text>
                 Instructor: Stephane Maarek
                 <br /> <br /> Udemy
               </Text>
@@ -310,7 +305,6 @@ function About() {
                 display={'flex'}
                 alignItems={'center'}
                 fontStyle={'oblique'}
-                textColor={'#a59595'}
               >
                 SQL and PostgreSQL:
                 <br />
@@ -320,7 +314,7 @@ function About() {
             </a>
             <Text>
               <hr />
-              <Text textColor={'#a59595'}>
+              <Text>
                 Instructor: Stephen Grider <br /> <br /> Udemy
               </Text>
             </Text>
@@ -335,7 +329,6 @@ function About() {
                 display={'flex'}
                 alignItems={'center'}
                 fontStyle={'oblique'}
-                textColor={'#a59595'}
               >
                 JavaScript Algorithms and Data Structures Masterclass
                 <Text className="status-indicator amber" />
@@ -343,7 +336,7 @@ function About() {
             </a>
             <Text>
               <hr />
-              <Text textColor={'#a59595'}>
+              <Text>
                 Instructor: Colt Steele <br /> <br /> Udemy
               </Text>
             </Text>

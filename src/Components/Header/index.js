@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './index.scss';
-import LogoU from '../../assets/images/logo-u1.png';
+import LogoU from '../../assets/images/logo-u4.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHouse,
@@ -34,7 +34,7 @@ function Header() {
           to="/"
           onClick={() => setShowNav(false)}
         >
-          <FontAwesomeIcon icon={faHouse} color="#bebcc4" className="home" />
+          <FontAwesomeIcon icon={faHouse} color="#736c5f" className="home" />
         </NavLink>
         <NavLink
           exact="true"
@@ -42,7 +42,7 @@ function Header() {
           to="/about"
           onClick={() => setShowNav(false)}
         >
-          <FontAwesomeIcon icon={faUser} color="#bebcc4" className="about" />
+          <FontAwesomeIcon icon={faUser} color="#736c5f" className="about" />
         </NavLink>
         <NavLink
           exact="true"
@@ -50,7 +50,7 @@ function Header() {
           to="/skills"
           onClick={() => setShowNav(false)}
         >
-          <FontAwesomeIcon icon={faGears} color="#bebcc4" className="skills" />
+          <FontAwesomeIcon icon={faGears} color="#736c5f" className="skills" />
         </NavLink>
         <NavLink
           exact="true"
@@ -60,7 +60,7 @@ function Header() {
         >
           <FontAwesomeIcon
             icon={faLaptopCode}
-            color="#bebcc4"
+            color="#736c5f"
             className="projects"
           />
         </NavLink>
@@ -72,7 +72,7 @@ function Header() {
         >
           <FontAwesomeIcon
             icon={faEnvelope}
-            color="#bebcc4"
+            color="#736c5f"
             className="contact"
           />
         </NavLink>
@@ -86,7 +86,7 @@ function Header() {
               rel="noreferrer"
               href="https://www.linkedin.com/in/muhammadusama12/"
             >
-              <FontAwesomeIcon icon={faLinkedinIn} color="#bebcc4" />
+              <FontAwesomeIcon icon={faLinkedinIn} color="#736c5f" />
             </a>
           </li>
           <li>
@@ -99,13 +99,13 @@ function Header() {
               <FontAwesomeIcon
                 className="github"
                 icon={faGithub}
-                color="#bebcc4"
+                color="#736c5f"
               />
             </a>
           </li>
           <li>
             <a href="/resume/Muhammad Usama Resume.pdf" download>
-              <FontAwesomeIcon icon={faFile} color="#bebcc4" />
+              <FontAwesomeIcon icon={faFile} color="#736c5f" />
             </a>
           </li>
         </div>
@@ -113,7 +113,7 @@ function Header() {
       <FontAwesomeIcon
         onClick={toggleNav}
         icon={faBars}
-        color="#b8a0c1"
+        color="#736c5f"
         className="stack"
       />
     </div>

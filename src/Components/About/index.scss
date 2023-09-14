@@ -3,6 +3,7 @@
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+  font-family: 'Inclusive Sans', sans-serif;
 }
 
 @keyframes pulse {
@@ -20,7 +21,7 @@
 }
 
 span {
-  color: #eca945;
+  color: #908568;
   opacity: 0;
   animation-name: fadeIn;
   animation-duration: 3s;
@@ -40,7 +41,7 @@ span {
   --s: 7px;
   padding: var(--s);
   border: calc(2 * var(--s)) solid #dddddd00;
-  outline: 1px solid #ffdb76;
+  outline: 1px solid #e0ddd5;
   outline-offset: calc(-1 * var(--s));
   background: conic-gradient(from 90deg at 0.5px 0.5px, #0000 25%, #000 0);
 }
@@ -54,25 +55,32 @@ span {
 
 .education-box {
   border: 1px double #d7ccc8;
+  color: #a8a08a;
   padding: 20px;
   margin: 10px;
   border-radius: 20px;
   letter-spacing: 2px;
-  font-weight: 400;
   font-size: 20px;
+  font-family: 'Inclusive Sans', sans-serif;
 }
 
 .development-box {
   border: 1px solid #d7ccc8;
+  color: #343023;
   padding: 20px;
+  font-family: 'Inclusive Sans', sans-serif;
   font-size: 20px;
   margin: 20px;
   border-radius: 20px;
-  font-weight: bold;
   letter-spacing: 1px;
 }
 .development-box a {
   text-decoration: none;
+  color: #a8a08a;
+}
+.development-box p {
+  text-decoration: none;
+  color: #a8a08a;
 }
 .legend {
   font-weight: 300;

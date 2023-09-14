@@ -7,18 +7,12 @@ html {
 h1,
 h2,
 h3 {
-  /* font-family: 'Yeseva One', cursive;
-   */
   font-family: 'Yeseva One', cursive;
 }
-p {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 400;
-}
+
 body {
   min-height: 100%;
   font: 300 12px/1.4 'Roboto', 'monospace';
-  /* color: #444; */
   background: white;
   display: block;
   overflow-x: hidden;

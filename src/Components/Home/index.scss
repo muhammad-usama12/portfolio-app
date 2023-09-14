@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@600&family=IBM+Plex+Mono&family=PT+Serif:wght@700&family=Permanent+Marker&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@600&family=IBM+Plex+Mono&family=PT+Serif:wght@700&family=Permanent+Marker&family=Yeseva+One&family=Montserrat:wght@300&family=Inclusive+Sans&family=Montserrat:wght@300&display=swap');
 
 .text-block {
   position: fixed;
@@ -24,7 +24,7 @@ h1 {
   .languages {
     border-radius: 0px;
     color: #ffffff;
-    background-color: #d4c6d9;
+    background-color: #c1b59f;
     opacity: 1;
     letter-spacing: 5px;
     animation: fade-in-out 5s linear infinite;
@@ -56,13 +56,13 @@ h1 {
     text-decoration: none;
     display: inline;
     font-family: 'Yeseva One', cursive;
-    color: #5c5060;
+    color: #ffffff;
 
     &:hover {
-      color: #50355d;
+      color: #ffffff;
 
       transition: text-shadow 0.5s ease-in-out;
-      text-shadow: 0 0 10px #ffffff, 0 0 20px #867090, 0 0 30px #534c56;
+      text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #6a5c5c;
     }
   }
 }
@@ -74,32 +74,75 @@ h1 {
   font-weight: 400;
   font-family: 'Open Sans', sans-serif;
   .typewriter-start {
-    color: #7a7184;
+    color: #736c5f;
     font-family: 'Open Sans', sans-serif;
   }
   .typewriter {
     background-color: #f2f0e9;
-    color: #c4afdc;
+    color: #736c5f;
     font-weight: 600;
     font-style: oblique;
   }
 }
 
-.home-btn {
+.home-tags {
+  display: flex;
+  justify-content: space-between;
+}
+.about-btn {
   color: #ffffff;
   font-size: 15px;
   font-weight: 600;
   font-family: Quicksand, sans-serif;
   letter-spacing: 4px;
   text-decoration: none;
-  padding: 10px 18px;
+  padding: 10px 10px;
   border: 1px;
   margin-top: 25px;
   float: left;
-  background-color: #d4c6d9;
+  background-color: #cdc3b2;
+  // background-color: #9a907f;
   white-space: nowrap;
   &:hover {
-    background-color: #7d718b;
+    background-color: #877e6f;
+    color: white;
+    border: none;
+  }
+}
+.projects-btn {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Quicksand, sans-serif;
+  letter-spacing: 4px;
+  text-decoration: none;
+  padding: 10px 10px;
+  border: 1px;
+  margin-top: 25px;
+  float: left;
+  background-color: #ada28f;
+  white-space: nowrap;
+  &:hover {
+    background-color: #877e6f;
+    color: white;
+    border: none;
+  }
+}
+.contact-btn {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Quicksand, sans-serif;
+  letter-spacing: 4px;
+  text-decoration: none;
+  padding: 10px 10px;
+  border: 1px;
+  margin-top: 25px;
+  float: left;
+  background-color: #877e6f;
+  white-space: nowrap;
+  &:hover {
+    background-color: #605a4f;
     color: white;
     border: none;
   }
@@ -131,6 +174,10 @@ canvas {
 }
 
 @media screen and (min-width: 300px) and (max-width: 1024px) {
+  .home-tags {
+    display: grid;
+    justify-items: start;
+  }
   h1 {
     font-size: 35px;
     width: 100;

@@ -51,7 +51,7 @@ function Home() {
         friction={0.01}
         markers={false}
         speed={1.25}
-        color={'#f5ecec'}
+        color={'#e6e1d8'}
         sensitivity={0.3}
         radial={10}
         smoothing={true}
@@ -65,20 +65,7 @@ function Home() {
         friction={0.01}
         markers={false}
         speed={1.25}
-        color={'#efeff2'}
-        sensitivity={0.3}
-        radial={10}
-        smoothing={true}
-        points={32}
-        elasticity={0.001}
-      />
-      <Blob
-        height={blobSpec.h}
-        radius={blobSpec.w}
-        friction={0.01}
-        markers={false}
-        speed={1.25}
-        color={'#dadae3'}
+        color={'#d9d2c5'}
         sensitivity={0.3}
         radial={10}
         smoothing={true}
@@ -92,7 +79,7 @@ function Home() {
         friction={0.01}
         markers={false}
         speed={1.25}
-        color={'#f5ecec'}
+        color={'#d3cbbb'}
         sensitivity={0.3}
         radial={10}
         smoothing={true}
@@ -105,21 +92,33 @@ function Home() {
         friction={0.01}
         markers={false}
         speed={1.25}
-        color={'#f2e2cd'}
+        color={'#c1b59f'}
         sensitivity={0.3}
         radial={10}
         smoothing={true}
         points={32}
         elasticity={0.001}
       />
-
       <Blob
         height={blobSpec.h}
         radius={blobSpec.w}
         friction={0.01}
         markers={false}
         speed={1.25}
-        color={'#a69eb0'}
+        color={'#ada28f'}
+        sensitivity={0.3}
+        radial={10}
+        smoothing={true}
+        points={32}
+        elasticity={0.001}
+      />
+      <Blob
+        height={blobSpec.h}
+        radius={blobSpec.w}
+        friction={0.01}
+        markers={false}
+        speed={1.25}
+        color={'#9a907f'}
         sensitivity={0.3}
         radial={10}
         smoothing={true}
@@ -167,9 +166,17 @@ function Home() {
           ]}
         />
       </div>
-      <Link to="/contact" className="home-btn">
-        Let's Chat!
-      </Link>
+      <div className="home-tags">
+        <Link to="/about" className="about-btn">
+          Get to Know Me
+        </Link>
+        <Link to="/projects" className="projects-btn">
+          My Work
+        </Link>
+        <Link to="/contact" className="contact-btn">
+          Let's Connect
+        </Link>
+      </div>
     </div>
   );
 }
