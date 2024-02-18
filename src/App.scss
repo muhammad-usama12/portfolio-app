@@ -1,22 +1,76 @@
-.page {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+// .page {
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+// }
+
+// .progress-bar {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   height: 10px;
+//   background: #877e6f;
+//   transform-origin: 0%;
+//   z-index: 100;
+// }
+
+// @media screen and (max-width: 1200px) {
+//   .progress-bar {
+//     height: 7px;
+//   }
+// }
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
-.progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 10px;
-  background: #877e6f;
-  transform-origin: 0%;
-  z-index: 100;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace;
 }
 
-@media screen and (max-width: 1200px) {
-  .progress-bar {
-    height: 7px;
-  }
+body {
+  background-color: #11151c;
+  color: lightgray;
 }
+
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// .socials svg{
+//   margin: 0 5px;
+//   transition: all 0.5s ease-in-out;
+//   transform: scale(1);
+// }
+
+// .socials svg:hover{
+//   transform: scale(1.2);
+// filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 1));
+// }
+
+// @mixin mobile {
+//   @media (max-width: 738px) {
+//     @content;
+//   }
+// }
+// @mixin tablet {
+//   @media (max-width: 1024px) {
+//     @content;
+//   }
+// }
+// @mixin desktop {
+//   @media (max-width: 1366px) {
+//     @content;
+//   }
+// }

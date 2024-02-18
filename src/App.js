@@ -1,35 +1,15 @@
 import './App.scss';
-import AppRoutes from './Components/router';
-import Header from './Components/Header/index';
-import { useLocation } from 'react-router-dom';
-import { motion, useScroll } from 'framer-motion';
-
+import { Navbar } from './components/navbar/Navbar';
 function App() {
-  const location = useLocation();
-  const isHome = location.pathname === '/';
-  const { scrollYProgress } = useScroll();
-
   return (
     <div className="App">
-      {isHome ? (
-        <>
-          <Header />
-          <div className="page">
-            <AppRoutes />
-          </div>
-        </>
-      ) : (
-        <>
-          <motion.div
-            className="progress-bar"
-            style={{ scaleX: scrollYProgress }}
-          />
-          <Header />
-          <div className="page">
-            <AppRoutes />
-          </div>
-        </>
-      )}
+      <section id="Homepage">
+        <Navbar />
+      </section>
+      <section id="About">About</section>
+      <section id="Skills">Skills</section>
+      <section id="Projects">Projects</section>
+      <section id="Contact">Contact</section>
     </div>
   );
 }
