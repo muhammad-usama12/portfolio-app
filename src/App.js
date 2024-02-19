@@ -1,6 +1,5 @@
 import vantaHalo from 'vanta/src/vanta.halo';
 import './App.scss';
-import Hero from './components/hero/Hero';
 import { Navbar } from './components/navbar/Navbar';
 function App() {
   vantaHalo({
@@ -17,7 +16,6 @@ function App() {
     <div className="App">
       <section id="Homepage">
         <Navbar />
-        <Hero />
       </section>
       <section id="About">About</section>
       <section id="Skills">Skills</section>
